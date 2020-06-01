@@ -64,13 +64,13 @@ List             = List(iUnique) ;
 
 if isExcludingHidden 
     if isunix
-        iHidden = contains( paths, filesep + "." ) ;
+        iHidden         = ~contains( paths, filesep + "." ) ;
     else 
         [~, Attributes] = arrayfun( @fileattrib, paths ) ;
         iHiddenFolders  = [ Attributes.hidden(:) & Attributes(:).directory ] ;
         iHiddenFiles    = [ Attributes.hidden(:) & ~Attributes(:).directory ] ;
-        iInclude        = ~[ iHiddenFiles | iHiddenFolders ] ; 
-        % ^redundant if 'hidden' is attributed recursively. not using a PC so idk.)
+        % ^redundant if 'hidden' is attributed recursively. (not using a PC so idk.)
+        iHidden         = [ iHiddenFiles | iHiddenFolders ] ; 
     end
     iInclude = ~iHidden ;
 else
