@@ -51,6 +51,12 @@ function [parentDir] = parent( pathIn, level )
         pathIn {mustBeStringOrCharOrCellstr}
         level {mustBeMember(level,["single" "common"])} = "single" ;
     end
+    
+% Return empty array if input path is empty    
+if isempty(pathIn)
+    parentDir = [] ;
+    return
+end
 
 P = Pathologist( pathIn ) ;
 
