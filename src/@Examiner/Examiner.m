@@ -1,23 +1,23 @@
-classdef Informer 
-%INFORMER Details the functionality of a .m file
+classdef Examiner 
+%EXAMINER Details the functionality of a .m file
 % 
-% The `Informer` class informs the `Documentor` class about the contents of .m
+% The `Examiner` class informs the `Documentor` class about the contents of .m
 % files: providing the functional details needed to document them. 
 %
 % In general, the class works behind the scenes and would not be directly
-% called upon by a user; however, an Informer object can be constructed
+% called upon by a user; however, an Examiner object can be constructed
 % independently as indicated below.
 %
 % __CONSTRUCTOR SYNTAX__
 %     
-%     Info = Informer( mFile ) ;
+%     Info = Examiner( mFile ) ;
 % 
-% Creates an `Informer` object pertaining to .m file (a script, function, class
+% Creates an `Examiner` object pertaining to .m file (a script, function, class
 % method, or classdef file) pointed to by the path string `mFile`.
 % If `mFile` contains multiple files, then `Info` is returned as an
 % object-array.
 % 
-% `Informer` has but two properties: `mFile` and `Attributes`.
+% `Examiner` has but two properties: `mFile` and `Attributes`.
 %
 % `Attributes` is a struct containing all available functional details
 % regarding `mFile`. 
@@ -26,7 +26,7 @@ classdef Informer
 %
 % The read-only fields of `Attributes` depend on the given .m-file type and
 % should be fairly self-explanatory given the field names. More detail is
-% available in the method documentation for Informer.getmattributes.
+% available in the method documentation for Examiner.getmattributes.
 %
  
 
@@ -42,10 +42,10 @@ properties( SetAccess=private )
     % Functional description of the .m file
     %
     % Attributes is a struct of .m file attributes, returned from a call to
-    % Informer.getmattributes( mFile ). It contains the following basic
+    % Examiner.getmattributes( mFile ). It contains the following basic
     % fields:
     % 
-    % - mType: Type of .m file: string scalar returned from Informer.mfiletype( mFile ).
+    % - mType: Type of .m file: string scalar returned from Examiner.mfiletype( mFile ).
     % Possibilities are: ["script","function","classdef","method","NA"]
     %   
     % - .Name: Name of the script, function, class or class method 
@@ -54,16 +54,16 @@ properties( SetAccess=private )
     % Attributes also contains fields:
     %
     % - .Description: Header line of help-text (string vector returned from
-    %   Informer.extracthelpheader) 
+    %   Examiner.extracthelpheader) 
     %
     % - .DetailedDescription: Body of help-text (string vector returned from
-    %   Informer.extracthelpbody) 
+    %   Examiner.extracthelpbody) 
     % 
     % ### References ###
     %
     % Remaining fields of Attributes vary depending on the type of file 
     % (i.e. Attributes.mType). For more info, see the method documentation:
-    % Informer.getmattributes
+    % Examiner.getmattributes
     Attributes struct ;
     
 end
@@ -73,7 +73,7 @@ end
 % =========================================================================    
 methods
 % =========================================================================    
-function [ Info ] = Informer( mFile )
+function [ Info ] = Examiner( mFile )
     
     if nargin == 0
         return ;
@@ -91,7 +91,7 @@ function [ Info ] = Informer( mFile )
     mFile = string( mFile ) ;    
     
     Info.mFile      = mFile(1) ;
-    Info.Attributes = Informer.getmattributes(mFile(1)) ;
+    Info.Attributes = Examiner.getmattributes(mFile(1)) ;
 
     if numel( mFile ) > 1
         
@@ -100,7 +100,7 @@ function [ Info ] = Informer( mFile )
         for iM = 2 : numel( mFile )
             fprintf( [ num2str(iM) '...' ] ) ;
             Info(iM).mFile      = mFile(iM) ;
-            Info(iM).Attributes = Informer.getmattributes(mFile(iM)) ;
+            Info(iM).Attributes = Examiner.getmattributes(mFile(iM)) ;
         end
         
         fprintf( '\n' ) ;
@@ -113,7 +113,7 @@ end
 function [Info] = set.mFile( Info, mFile )
    
    Info.mFile      = mFile ; 
-   Info.Attributes = Informer.getmattributes( mFile ) ;
+   Info.Attributes = Examiner.getmattributes( mFile ) ;
 
 end
 % =========================================================================    

@@ -32,7 +32,7 @@ else
             end
 
             if ~isempty( Mthd.DetailedDescription )
-                % NOTE: could change Informer so it doesn't fill DetailedDescription with the copy of Description...
+                % NOTE: could change Examiner so it doesn't fill DetailedDescription with the copy of Description...
                 if ~strcmp( Mthd.DetailedDescription, Mthd.Description )                         
                     docStr = [ docStr ; Mthd.DetailedDescription ; "" ] ;
                 end

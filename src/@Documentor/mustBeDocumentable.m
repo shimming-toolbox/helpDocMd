@@ -8,12 +8,12 @@ function [] = mustBeDocumentable( mFile )
 % - `mFile` is (or, is convertible to) a string scalar
 % - `mFile` is a valid file path, i.e. `isfile( mFile )` evaluates to `true`
 % - `mFile` points to a valid script, function, or classdef file, i.e.
-% `ismember( Informer.mfiletype( mFile ), ["script", "function","classdef"] ) == 1`
+% `ismember( Examiner.mfiletype( mFile ), ["script", "function","classdef"] ) == 1`
     arguments
         mFile(1,1) string {mustBeFile} ;
     end
 
-    if ~ismember( Informer.mfiletype( mFile ), Documentor.mTypesSupported ) ;
+    if ~ismember( Examiner.mfiletype( mFile ), Documentor.mTypesSupported ) ;
         error('Input must be a path string to a valid script, function, or classdef .m file')
     end
 

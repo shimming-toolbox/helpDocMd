@@ -3,21 +3,21 @@ function [mHelpBody] = extracthelpbody( mHelp )
 %     
 %     mHelpBody = EXTRACTHELPBODY( mHelp ) ;
 %
-% EXTRACTHELPBODY returns a body of help-text (i.e. from Informer.gethelptext) 
+% EXTRACTHELPBODY returns a body of help-text (i.e. from Examiner.gethelptext) 
 % and trims it of its leading line of text. (If the text consists solely of the
 % leading line, then this line is returned.)
 %
 % __EXAMPLE__
 % ```
 % % To display the current section of text, without the title line:
-% mHelpBody = Informer.extracthelpbody( Informer.gethelptext( 'Informer.extracthelpbody' ) )
+% mHelpBody = Examiner.extracthelpbody( Examiner.gethelptext( 'Examiner.extracthelpbody' ) )
 % ```
 %
 % __ETC__
 % See also
 %
-% -Informer.gethelptext
-% -Informer.extracthelpheader 
+% -Examiner.gethelptext
+% -Examiner.extracthelpheader 
     arguments
         mHelp {mustBeStringOrCharOrCellstr} ;
     end

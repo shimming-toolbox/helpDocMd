@@ -2,7 +2,7 @@ function [docStr] = documentfunction( Info )
 %DOCUMENTFUNCTION adds function-specific info to documentation  
 %
 % NOTE: for now, this is just nArgin/nArgout but this should be elaborated
-% in Informer.m -- e.g. by parsing the function arguments block when it exists
+% in Examiner.m -- e.g. by parsing the function arguments block when it exists
     arguments
         Info struct ;
     end

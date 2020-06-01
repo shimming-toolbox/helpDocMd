@@ -39,14 +39,14 @@ function [mFiles] = findfiles( src, isRecursive )
 %
 % *Documentability* of a given .m file (i.e. whether it is included among the
 % returned `mFiles` list) is defined according to the file-type returned by
-% `mType = Informer.mfiletype( mFile )`:
+% `mType = Examiner.mfiletype( mFile )`:
 %
 % -`if mType == "NA"`: 
 % The file is considered invalid and thereby omitted from `mFiles`. 
 % This will be the case for nominal .m files (non-MATLAB files with
 % '.m' file extensions) as well as invalid MATLAB files (source files with
-% buggy implementations that preclude assessment with `Informer.mfiletype`).
-% For more info, refer to the documentation for Informer.mfiletype
+% buggy implementations that preclude assessment with `Examiner.mfiletype`).
+% For more info, refer to the documentation for Examiner.mfiletype
 %
 % -`if mType == "method"`: 
 % Standalone source files pertaining to class-methods are, likewise, omitted
@@ -75,7 +75,7 @@ function [mFiles] = findfiles( src, isRecursive )
 % __ETC__
 %
 % - standalone function: findfiles.m 
-% - Informer.mfiletype
+% - Examiner.mfiletype
 %
 % See also
 % FINDFILES
@@ -125,7 +125,7 @@ if isempty(mFiles) || isequal( mFiles, "" )
 end
 
 %% Validate .m files:
-mTypes       = Informer.mfiletype( mFiles ) ;
+mTypes       = Examiner.mfiletype( mFiles ) ;
 invalidFiles = mFiles( mTypes=="NA" ) ;
 
 if numel( invalidFiles ) > 0 
