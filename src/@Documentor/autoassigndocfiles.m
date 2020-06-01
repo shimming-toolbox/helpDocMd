@@ -47,8 +47,10 @@ function [] = autoassigndocfiles( Dr, outputDir )
 
     % ignore @class directories: class documentation goes to parent folder
     isClassDir            = contains( subDirs, filesep + "@" ) ;
-    subDirs( isClassDir ) = parent( subDirs( isClassDir ), 'single' ) ;
-
+    if any(isClassDir)
+        subDirs( isClassDir ) = parent( subDirs( isClassDir ), 'single' ) ;
+    end
+    
     % assign file name(s)
     docFiles = fullfile( outputDir, subDirs, names + ".md" ) ;
     
