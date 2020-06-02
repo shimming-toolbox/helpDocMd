@@ -92,8 +92,8 @@ dirsIn = P.folders ;
 
 %% Validate input paths exist 
 if all( ~P.isvalid )
-    error( [ 'helpDocMd:Documentor.findfiles:invalidPath', ...
-             'Failed to validate any of the given input paths..'] ) ;
+    error( 'helpDocMd:Documentor.findfiles:invalidPath', ...
+           'Failed to validate any of the given input paths..' ) ;
 
 elseif any( ~P.isvalid )
     % in case the list is long, print it above the warning
