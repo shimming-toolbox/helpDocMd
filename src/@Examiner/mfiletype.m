@@ -9,14 +9,14 @@ function [mType, mPath, mExist] = mfiletype( mFile )
 % 
 % 1. `mType` a string vector with entries
 %
-% `mType(i)`| when input `mFile(i)` is...  
-% ----------|-----------------------------------------------------------------|
-% "script"  | a script file 
-% "function"| a function file (even one with void arguments)
-% "classdef"| a class definition file
-% "method"  | a .m function (~=constructor) in a folder beginning with "@"
-%   "NA"    | an unimplemented or non-Matlab file with a .m file extension
-%    ""     | an invalid file path (e.g. folder, non-Matlab, or non-existent)
+% |`mType(i)`| when input `mFile(i)` is...  
+% |:--------:|-----------------------------------------------------------------|
+% |"script"  | a script file 
+% |"function"| a function file (even one with void arguments)
+% |"classdef"| a class definition file
+% |"method"  | a .m function (~=constructor) in a folder beginning with "@"
+% |  "NA"    | an unimplemented or non-Matlab file with a .m file extension
+% |  " "     | an invalid file path (e.g. folder, non-Matlab, or non-existent)
 % 
 % 2.`mPath` a string vector of the full file system paths.
 %
