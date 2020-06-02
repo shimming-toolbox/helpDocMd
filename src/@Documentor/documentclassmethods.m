@@ -49,7 +49,7 @@ else
             mthdFields = fieldnames( Mthd ) ;
 
             if isDropdown % insert in HTML dropdown 
-                docStr = [ docStr ; "<details>" ; "<summary><b>Details</b></summary>"; " " ] ;
+                docStr = [ docStr ; "<details markdown=""block"">" ; " " ] ;
             end 
 
             %% Place basic (logical) attributes into markdown table

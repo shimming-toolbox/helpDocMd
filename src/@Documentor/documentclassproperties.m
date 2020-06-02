@@ -26,7 +26,7 @@ else
             Prop = rmfield( Prop, {'Name'; 'Description' ; 'DetailedDescription'} ) ;
 
             if isDropdown % insert in HTML dropdown 
-                docStr = [ docStr ; "<details>" ; "<summary><b>Details</b></summary>"; " " ] ;
+                docStr = [ docStr ; "<details markdown=""block"">" ; " " ] ;
             end 
 
             [attTable, Prop] = tablelogicalattributes( Prop ) ;
