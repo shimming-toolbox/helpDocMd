@@ -64,7 +64,7 @@ List             = List(iUnique) ;
 
 if isExcludingHidden 
     if isunix
-        iHidden         = ~contains( paths, filesep + "." ) ;
+        iHidden         = contains( paths, filesep + "." ) ;
     else 
         [~, Attributes] = arrayfun( @fileattrib, paths ) ;
         iHiddenFolders  = [ Attributes.hidden(:) & Attributes(:).directory ] ;
