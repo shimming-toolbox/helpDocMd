@@ -1,12 +1,12 @@
-function [docStr] = documentclassdef( Info, isDetailed )
+function [docStr] = documentclassdef( Info, isDetailed, isDropdown )
 %DOCUMENTCLASSDEF Return string vector of class documentation 
 %
-% DOCUMENTCLASSDEF documents basic class attributes followed by class member
-% documentation (courtesy of calls to Documentor.documentclassproperties and
-% Documentator.documentclassmethods)
+% Documents basic class attributes followed by class member documentation
+% (courtesy of calls to `documentclassproperties` and `documentclassmethods`).
     arguments
         Info struct ;
         isDetailed {mustBeBoolean} = true ;
+        isDropdown {mustBeBoolean} = true ;
     end
 
 assert( strcmp(Info.mType, "classdef"), 'mFile is not a class' ) ;
@@ -16,9 +16,11 @@ docStr = Documentor.documentbasic( Info ) ;
 % remove fields included in documentbasic 
 Info = rmfield( Info, {'mType' ; 'Name' ; 'Description' ; 'DetailedDescription'} ) ;
 
-docStr = [docStr ; "" ; "__ATTRIBUTES__"; "" ] ;
+if isDropdown % insert in HTML dropdown 
+    docStr = [ docStr ; "<details>" ; "<summary><b>Details</b></summary>"; " " ] ;
+end 
 
-%% Place basic (logical) attributes into an HTML table
+%% Place basic (logical) attributes into markdown table
 tableFields = { 'Hidden' ; 'Sealed' ; 'Abstract' ; 'Enumeration'; ... 
                 'ConstructOnLoad' ; 'HandleCompatible'; 'RestrictsSubclassing' } ;
 
@@ -44,6 +46,10 @@ for iField = 1 : numel(fields)
     elseif ~isstruct( Info.(field) ) % Property + MethodList etc. will be structs (handle them separately)
         docStr(end+1) = strcat( "- ", fields(iField), " : ", string( Info.( field ) ) ) ;
     end
+end
+
+if isDropdown
+    docStr = [docStr ; " " ; "</details>"];
 end
 
 docStr = [ docStr ; "" ; Documentor.documentclassproperties( Info, isDetailed ) ] ;    

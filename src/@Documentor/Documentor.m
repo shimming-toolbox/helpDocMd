@@ -69,10 +69,10 @@ properties( SetAccess=immutable ) % `immutable` might simplify object handling; 
 
     % String vector specifying the full file path of the .m file to document
     %
-    % For details re: file 'documentability',
-    % See also 
-    % Documentor.mustBeDocumentable 
-    % Documentor.findfiles
+    % For details re: file 'documentability',  
+    % See also   
+    % Documentor.mustBeDocumentable   
+    % Documentor.findfiles  
     mFile {Documentor.mustBeDocumentable} = string( [ mfilename('fullpath') '.m' ] ) ;
 
 end

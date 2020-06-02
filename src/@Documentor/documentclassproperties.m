@@ -1,8 +1,9 @@
-function docStr = documentclassproperties( Info, isDetailed )
+function docStr = documentclassproperties( Info, isDetailed, isDropdown )
 %DOCUMENTCLASSPROPERTIES Return string vector of class property documentation
     arguments
         Info struct ;
         isDetailed {mustBeBoolean} = true ;
+        isDropdown {mustBeBoolean} = true ;
     end
 
 % assert( strcmp(Info.mType, "classdef"), 'mFile is not a class' ) ;
@@ -19,10 +20,14 @@ else
         
         if isDetailed || ( strcmp( Prop.GetAccess, 'public' ) && ~Prop.Hidden )
             
-            docStr = [ docStr ; "" ; Documentor.documentbasic( Prop, 3 ) ] ;
+            docStr = [ docStr ; " " ; "-----" ; " " ; Documentor.documentbasic( Prop, 3 ) ] ;
 
             % remove fields already covered by documentbasic
             Prop = rmfield( Prop, {'Name'; 'Description' ; 'DetailedDescription'} ) ;
+
+            if isDropdown % insert in HTML dropdown 
+                docStr = [ docStr ; "<details>" ; "<summary><b>Details</b></summary>"; " " ] ;
+            end 
 
             [attTable, Prop] = tablelogicalattributes( Prop ) ;
             docStr     = [ docStr ; attTable ; "" ] ;
@@ -52,6 +57,10 @@ else
                   docStr = [docStr ; strcat( "- ", field, " : ", strjoin(string( Prop.( field ) ), "; " ) ) ] ;
                 end
             end
+            
+            if isDropdown
+                docStr = [docStr ; " " ; "</details>"];
+            end
         end
     end
 end
@@ -59,7 +68,7 @@ end
 function [ attTable, Prop] = tablelogicalattributes( Prop )
 %TABLELOGICALATTRIBUTES Document logical attributes as an HTML table
 %
-% document logical attributes as an HTML table (moved here to trim down ugly for loop above)
+% document logical attributes as markdown table (moved here to trim down ugly for loop above)
 
     propFields = fieldnames( Prop ) ;
     boolFields = propFields( structfun( @islogical, Prop ) ) ;
