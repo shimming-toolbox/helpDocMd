@@ -90,7 +90,7 @@ would likely be useful.
 
 - Adding option (perhaps as a logical called "isGeneratingOverview") to
 generate an overview/table of contents file, consisting of the code names
-and the summary header line (i.e. from Informer.Attributes.Description).
+and the summary header line (i.e. from Examiner.Attributes.Description).
 This might be similar to MATLAB's Contents.m files, or the displayed return
 from LOOKFOR (e.g. type: lookfor image) e.g.
 <https://octave.sourceforge.io/octave/overview.html>

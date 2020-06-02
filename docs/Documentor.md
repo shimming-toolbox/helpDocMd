@@ -61,35 +61,55 @@ sample of Markdown text will display once reformatted to HTML
     Documentation for Documentor
        doc Documentor
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-__ATTRIBUTES__
-
-
-<table>
-<table border=1><tr><th>Hidden</th><th>Sealed</th><th>Abstract</th><th>Enumeration</th><th>ConstructOnLoad</th><th>HandleCompatible</th><th>RestrictsSubclassing</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td></tr>
-</table>
+| Attribute            | Value |
+|:--------------------:|:-----:|
+| Hidden               | false |
+| Sealed               | false |
+| Abstract             | false |
+| Enumeration          | false |
+| ConstructOnLoad      | false |
+| HandleCompatible     | true  |
+| RestrictsSubclassing | false |
 
 - InferiorClasses : [N/A] 
 - ContainingPackage : [N/A] 
 - EventList : [N/A] 
 - EnumerationMemberList : [N/A] 
 - Superclasses: handle
+ 
+</details>
 
 - - -
 ## Properties
 
-
+ 
+-----
+ 
 ### Ext
 
 **Synopsis:** _Default file extensions_
 
   Default file extensions
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>true</td><td>false</td><td>false</td><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td><td>true</td></tr>
-</table>
+<details>
+<summary><b>Details</b></summary>
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | true  |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | true  |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | true  |
+| HasDefault    | true  |
 
 - GetAccess : public
 - SetAccess : none
@@ -99,17 +119,32 @@ __ATTRIBUTES__
 - DefaultValue : [N/A] 
 - Validation : [N/A] 
 - DefiningClass : Documentor
-
+ 
+</details>
+ 
+-----
+ 
 ### mTypesSupported
 
 **Synopsis:** _Supported .m file types (script, function, classdef)_
 
   Supported .m file types (script, function, classdef)
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>true</td><td>false</td><td>false</td><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td><td>true</td></tr>
-</table>
+<details>
+<summary><b>Details</b></summary>
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | true  |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | true  |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | true  |
+| HasDefault    | true  |
 
 - GetAccess : public
 - SetAccess : none
@@ -119,7 +154,11 @@ __ATTRIBUTES__
 - DefaultValue : script; function; classdef
 - Validation : [N/A] 
 - DefiningClass : Documentor
-
+ 
+</details>
+ 
+-----
+ 
 ### mFile
 
 **Synopsis:** _String vector specifying the full file path of the .m file to document_
@@ -129,31 +168,57 @@ See also
 Documentor.mustBeDocumentable
 Documentor.findfiles
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+<details>
+<summary><b>Details</b></summary>
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | false |
+| HasDefault    | true  |
 
 - GetAccess : public
 - SetAccess : immutable
 - PartialMatchPriority : [N/A] 
 - GetMethod : 
 - SetMethod : 
-- DefaultValue : /Users/ryan/Projects/General/scripts/shim/helpDocMd/src/@Documentor/Documentor.m
+- DefaultValue : /Users/ryan/Projects/General/scripts/helpDocMd/src/@Documentor/Documentor.m
 - Validation: 
 Validator functions: Documentor.mustBeDocumentable
 - DefiningClass : Documentor
-
+ 
+</details>
+ 
+-----
+ 
 ### docFile
 
 **Synopsis:** _String vector specifying the full file path for the printed documentation_
 
   String vector specifying the full file path for the printed documentation
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td><td>true</td></tr>
-</table>
+<details>
+<summary><b>Details</b></summary>
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | true  |
+| NonCopyable   | false |
+| HasDefault    | true  |
 
 - GetAccess : public
 - SetAccess : public
@@ -165,17 +230,32 @@ Validator functions: Documentor.mustBeDocumentable
 Class: string
 Validator functions: mustBeStringScalarOrCharVector
 - DefiningClass : Documentor
-
+ 
+</details>
+ 
+-----
+ 
 ### docContent
 
 **Synopsis:** _Documentation text content as a string vector_
 
   Documentation text content as a string vector 
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td><td>true</td></tr>
-</table>
+<details>
+<summary><b>Details</b></summary>
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | true  |
+| NonCopyable   | false |
+| HasDefault    | true  |
 
 - GetAccess : public
 - SetAccess : public
@@ -187,6 +267,8 @@ Validator functions: mustBeStringScalarOrCharVector
 Class: string
 Validator functions: 
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 ## Methods
@@ -197,74 +279,26 @@ Validator functions:
 
 ### Documentor
 
-**Synopsis**: __.m_bedded `doc`s to .md text files_ 
+**Synopsis**: _Constructor_ 
 
-Documentor (re)publishes embedded source code documentation to text files
-(i.e. as [Markdown](https://daringfireball.net/projects/markdown/)).
+<details>
+<summary><b>Details</b></summary>
+ 
 
-**Refer to the README document for basic usage.**
-
-__CONSTRUCTOR SYNTAX__
-
-      Dr = Documentor( src ) ;      
-      Dr = Documentor( src, Options ) ; 
-
-`src` is a string vector of file paths to .m source files and/or directories
-in which to search for them.
-
-The constructor calls the methods `draftcontent` and `autoassigndocfiles`,
-which respectively set the properties:
--`docContent`: the documentation text content, and
--`docFile`: the output filepath for the published documentation.
-
-Both of which can be reconfigured prior to publishing to file via `printdoc()`.
-
-__OPTIONS__
-
-The constructor accepts a struct of `Options` parameters, with the following
-supported fields.
-
--`Options.detailLevel`: Specifies the degree of detail to include when
-generating documentation via `draftcontent()`.
-
--`Options.outputDir`: specifies the *primary* folder for the printed
-documentation files, used in the call to `autoassigndocfiles()`.
-
-For more info, refer to the documentation for the corresponding methods.
-
-__TIPS__
-1. Verify that the assignments to `docFile` are indeed suitable prior
-to calling `printdoc`.
-
-2. If `src` will contain paths from all over the file system, it may be
-better to construct independent Documentor arrays as the default assignments
-to `docFile` are more likely to work if the original `src` paths stem from a
-common user directory.
-
-3. To get a better idea of what files will actually be documented, you may
-want to first initialize `src` as `src = Documentor.findfiles( src )`, as
-is done during object construction. The reason being that `src` is used to
-assign the `mFile` property (which is fixed upon object construction) and any
-invalid or *incompatible* paths suggested by `src` will be automatically
-filtered out. For more info, refer to the documentation entries for
-`Documentor.findfiles` and `Documentor.mustBeDocumentable`.
-
-__ETC__
--[test](https://daringfireball.net/projects/markdown/dingus) how a
-sample of Markdown text will display once reformatted to HTML
-
-
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : src, Params
 - OutputNames : Dr
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -285,18 +319,24 @@ To overwrite existing files, use the above name-value argument pair.
 Output file paths and error messages are returned as string vectors to output
 arguments 1 and 2. Entries of `errMsg` are blank "" if printing succeeded without error.
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : docFiles, errMsg
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -305,18 +345,24 @@ arguments 1 and 2. Entries of `errMsg` are blank "" if printing succeeded withou
 
 **Synopsis**: _Documentor/draftdoc is an undocumented builtin Documentor method._ 
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : Dr
 - OutputNames : [N/A] 
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -345,18 +391,24 @@ level above the base directory common to the paths among `Dr.mFiles`
 be). Failing that, "docs" will be in the temporary directory returned by
 MATLAB function `tempdir()`.
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : Dr, outputDir
 - OutputNames : [N/A] 
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -382,41 +434,68 @@ messes up the latter (see: Documentor.tableattributes)
 
 + replace instances of 'MATLAB' and/or 'MATLAB(R)' with 'MATLAB&reg;'
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : muDocStr
 - OutputNames : mdDocStr
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
 
 ### tableattributes
 
-**Synopsis**: _Return html-table of class/classmember attributes_ 
+**Synopsis**: _Return markdown text table of class/classmember attributes_ 
 
+      
+      txtTable = tableattributes( Attributes )
 
-tableStr = GETHELPTEXT( Attributes )
+`Attributes` is a struct of class member attributes and `txtTable` is
+returned as string vector where each element is a row in a dual-column table.
 
+For instance, if `Attributes` possesses the 2 fields
+```
+Attributes.This = "One";
+Attributes.That = "Two";
+```
+The output table will look like
 
-#### Attributes:
+| Attribute | Value |
+|:---------:|:-----:|
+|   This    |  One  |
+|   That    |  Two  |
 
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+<details>
+<summary><b>Details</b></summary>
+ 
+
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
-- InputNames : Attributes
+- InputNames : varargin
 - OutputNames : tableStr
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -426,20 +505,26 @@ tableStr = GETHELPTEXT( Attributes )
 **Synopsis**: _adds function-specific info to documentation_ 
 
 NOTE: for now, this is just nArgin/nArgout but this should be elaborated
-in Informer.m -- e.g. by parsing the function arguments block when it exists
+in Examiner.m -- e.g. by parsing the function arguments block when it exists
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : docStr
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -450,18 +535,24 @@ in Informer.m -- e.g. by parsing the function arguments block when it exists
 
  DOCUMENTCLASSPROPERTIES Return string vector of class property documentation
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : docStr
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -472,18 +563,24 @@ in Informer.m -- e.g. by parsing the function arguments block when it exists
 
  DOCUMENTCLASSMETHODS Return string vector of class method documentation
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : docStr
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -492,22 +589,27 @@ in Informer.m -- e.g. by parsing the function arguments block when it exists
 
 **Synopsis**: _Return string vector of class documentation_ 
 
-DOCUMENTCLASSDEF documents basic class attributes followed by class member
-documentation (courtesy of calls to Documentor.documentclassproperties and
-Documentator.documentclassmethods)
+Documents basic class attributes followed by class member documentation
+(courtesy of calls to `documentclassproperties` and `documentclassmethods`).
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : docStr
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -520,18 +622,24 @@ Documentator.documentclassmethods)
      [docStr] = documentbasic( Info )
      [docStr] = documentbasic( Info, headingLevel )
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : docStr
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -548,20 +656,26 @@ Throws an error if `mFile` does not meet the following requirements:
 - `mFile` is (or, is convertible to) a string scalar
 - `mFile` is a valid file path, i.e. `isfile( mFile )` evaluates to `true`
 - `mFile` points to a valid script, function, or classdef file, i.e.
-`ismember( Informer.mfiletype( mFile ), ["script", "function","classdef"] ) == 1`
+`ismember( Examiner.mfiletype( mFile ), ["script", "function","classdef"] ) == 1`
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : [N/A] 
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -609,14 +723,14 @@ found whatsoever, an error is issued.
 
 *Documentability* of a given .m file (i.e. whether it is included among the
 returned `mFiles` list) is defined according to the file-type returned by
-`mType = Informer.mfiletype( mFile )`:
+`mType = Examiner.mfiletype( mFile )`:
 
 -`if mType == "NA"`:
 The file is considered invalid and thereby omitted from `mFiles`.
 This will be the case for nominal .m files (non-MATLAB files with
 '.m' file extensions) as well as invalid MATLAB files (source files with
-buggy implementations that preclude assessment with `Informer.mfiletype`).
-For more info, refer to the documentation for Informer.mfiletype
+buggy implementations that preclude assessment with `Examiner.mfiletype`).
+For more info, refer to the documentation for Examiner.mfiletype
 
 -`if mType == "method"`:
 Standalone source files pertaining to class-methods are, likewise, omitted
@@ -645,23 +759,29 @@ warning be issued?
 __ETC__
 
 - standalone function: findfiles.m
-- Informer.mfiletype
+- Examiner.mfiletype
 
 See also
 FINDFILES
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : mFiles
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -674,22 +794,28 @@ FINDFILES
       Dr.draftdoccontent( )
       Dr.draftdoccontent( detailLevel )
 
-Calls `Informer` to retrieve info on the file assigned to `Dr.mFile` and
+Calls `Examiner` to retrieve info on the file assigned to `Dr.mFile` and
 assigns a formatted string vector to `Dr.docContent` which can then be
 printed to file via `Dr.printdoc()`.
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : varargout
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -722,18 +848,24 @@ remote directory.
 for the Yml configuration file to work, the documentation must be in a
 folder called docs in the same folder
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : varargout
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
@@ -742,147 +874,153 @@ folder called docs in the same folder
 
 **Synopsis**: _Returns an empty object array of the given size_ 
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : E
 - DefiningClass : Documentor
+ 
+</details>
 
 ---
 
 ### eq
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### ne
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### lt
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### gt
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### le
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### ge
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### delete
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### isvalid
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### findprop
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### notify
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### notify
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### addlistener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### listener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### addlistener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### listener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### addlistener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### listener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### addlistener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### listener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### addlistener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### listener
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.
 
 ---
 
 ### findobj
-[ _built-in method derived from class_ **handle** ]
-For more info, see MATLAB documentation]
+— _built-in method derived from class_ **handle**. 
+For more info, refer to the MATLAB documentation.

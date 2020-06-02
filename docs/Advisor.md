@@ -11,33 +11,54 @@ WIP
     Documentation for Advisor
        doc Advisor
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-__ATTRIBUTES__
-
-
-<table>
-<table border=1><tr><th>Hidden</th><th>Sealed</th><th>Abstract</th><th>Enumeration</th><th>ConstructOnLoad</th><th>HandleCompatible</th><th>RestrictsSubclassing</th></tr>
-<tr><td>false</td><td>false</td><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute            | Value |
+|:--------------------:|:-----:|
+| Hidden               | false |
+| Sealed               | false |
+| Abstract             | true  |
+| Enumeration          | false |
+| ConstructOnLoad      | false |
+| HandleCompatible     | false |
+| RestrictsSubclassing | false |
 
 - InferiorClasses : [N/A] 
 - ContainingPackage : [N/A] 
 - EventList : [N/A] 
 - EnumerationMemberList : [N/A] 
 - SuperclassList : [N/A] 
+ 
+</details>
 
 - - -
 ## Properties
 
-
+ 
+-----
+ 
 ### isCopying
 
 **Synopsis:** _Advisor/isCopying is a property._
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th><th>DefaultValue</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td></tr>
-</table>
+<details>
+<summary><b>Details</b></summary>
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | false |
+| HasDefault    | true  |
+| DefaultValue  | false |
 
 - GetAccess : public
 - SetAccess : public
@@ -46,6 +67,8 @@ __ATTRIBUTES__
 - SetMethod : 
 - Validation : [N/A] 
 - DefiningClass : Advisor
+ 
+</details>
 
 ---
 ## Methods
@@ -56,24 +79,26 @@ __ATTRIBUTES__
 
 ### Advisor
 
-**Synopsis**: _Templates and tools for documenting code_ 
+**Synopsis**: _Constructor_ 
 
-Advisor provides templates for writing help entries to new MATLAB files
+<details>
+<summary><b>Details</b></summary>
+ 
 
-WIP
-
-
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : [N/A] 
 - OutputNames : Ad
 - DefiningClass : Advisor
+ 
+</details>
 
 ---
 
@@ -85,18 +110,24 @@ WIP
 
 ...
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : [N/A] 
 - OutputNames : [N/A] 
 - DefiningClass : Advisor
+ 
+</details>
 
 ---
 
@@ -108,18 +139,24 @@ WIP
 
 ...
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : [N/A] 
 - OutputNames : [N/A] 
 - DefiningClass : Advisor
+ 
+</details>
 
 ---
 
@@ -135,18 +172,24 @@ should also be able print to a new file.m (w/out overwrite option)
 
 DEFAULT.link[1]: http://en.wikipedia.org/wiki/Markdown        "Markdown"
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : [N/A] 
 - OutputNames : [N/A] 
 - DefiningClass : Advisor
+ 
+</details>
 
 ---
 
@@ -160,18 +203,24 @@ DEFAULT.link[1]: http://en.wikipedia.org/wiki/Markdown        "Markdown"
 
 `function_template` returns the template as a string vector `txt`.
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : pathIn
 - OutputNames : txt
 - DefiningClass : Advisor
+ 
+</details>
 
 ---
 
@@ -206,18 +255,24 @@ __DESCRIPTION__
 To suppress the print display, call the function with a return argument,
 e.g. using the dummy argument `[~] = txttable();`.
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : txt
 - DefiningClass : Advisor
+ 
+</details>
 
 ---
 
@@ -238,18 +293,24 @@ e.g. using the dummy argument `[~] = readme();`.
 When the first input is `[ 1 | true ]`, the `txt` is copied to the clipboard.
 This should be adequate for most cases: Paste to your file and begin editing.
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : txt
 - DefiningClass : Advisor
+ 
+</details>
 
 ---
 
@@ -258,15 +319,21 @@ This should be adequate for most cases: Paste to your file and begin editing.
 
 **Synopsis**: _Returns an empty object array of the given size_ 
 
+<details>
+<summary><b>Details</b></summary>
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : E
 - DefiningClass : Advisor
+ 
+</details>
