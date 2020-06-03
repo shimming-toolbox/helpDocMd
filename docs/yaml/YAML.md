@@ -39,8 +39,7 @@ See also: xmlread xmlwrite
     Documentation for YAML
        doc YAML
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute            | Value |
@@ -71,8 +70,7 @@ See also: xmlread xmlwrite
 
 **Synopsis:** _YAML.JARFILE is a property._
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -111,8 +109,7 @@ See also: xmlread xmlwrite
 
  WRITE serialize and write yaml data to file
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -139,8 +136,7 @@ See also: xmlread xmlwrite
 
  READ read and decode yaml data from file
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -167,8 +163,7 @@ See also: xmlread xmlwrite
 
  DUMP serialize matlab object into yaml string
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -195,8 +190,7 @@ See also: xmlread xmlwrite
 
  LOAD load matlab object from yaml string
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -223,8 +217,7 @@ See also: xmlread xmlwrite
 
  JARFILE path to the SnakeYAML jar file
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -251,8 +244,7 @@ See also: xmlread xmlwrite
 
  DUMP_DATA convert
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -279,8 +271,7 @@ See also: xmlread xmlwrite
 
  MERGE_CELL convert cell array to native matrix
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -307,8 +298,7 @@ See also: xmlread xmlwrite
 
  LOAD_DATA recursively convert java objects
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -333,8 +323,7 @@ See also: xmlread xmlwrite
 
 **Synopsis**: _Constructor_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -359,8 +348,7 @@ See also: xmlread xmlwrite
 
 **Synopsis**: _Returns an empty object array of the given size_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |

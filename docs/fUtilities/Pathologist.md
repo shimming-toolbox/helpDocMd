@@ -24,8 +24,7 @@ zeitgeist due to COVID-19, "Pathologist" seems an appropriate moniker.
     Documentation for Pathologist
        doc Pathologist
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute            | Value |
@@ -58,8 +57,7 @@ zeitgeist due to COVID-19, "Pathologist" seems an appropriate moniker.
 
   Input data-type (aka 'class') 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -93,8 +91,7 @@ Validator functions: @(typeIn)mustBeMember(typeIn,["string","char","cell"])
 
 **Synopsis:** _Pathologist/sizeIn is a property._
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -128,8 +125,7 @@ Validator functions: @(typeIn)mustBeMember(typeIn,["string","char","cell"])
 
   Path data: real or fictitious files or folders
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -165,8 +161,7 @@ Validator functions: mustBeString
 
 (Default is whatever data type was used to initialize the object.)
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -202,8 +197,7 @@ Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 
   list of files among Path.data
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -237,8 +231,7 @@ Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 
   list of folders among Path.data
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -272,8 +265,7 @@ Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 
   subfolders of each folder element of Path.data
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -307,8 +299,7 @@ Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 
   Number of input paths
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -342,8 +333,7 @@ Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 
 Main doc. entry (for now?): parent.m
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -378,8 +368,7 @@ Main doc. entry (for now?): parent.m
 `if Path.nPaths == 1, Path.baseDir = Path.parentDir`
 Main doc. entry (for now?): parent.m
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -420,8 +409,7 @@ Validator functions:
 
 `Path.isValid = [ Path.isfile | Path.isfolder ]`
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -446,8 +434,7 @@ Validator functions:
 
 **Synopsis**: _Constructor_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -474,8 +461,7 @@ Validator functions:
 
  FILEPARTS Overloaded MATLAB function: [filepath,name,ext] = arrayfun( @fileparts, Path.data ) ;
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -502,8 +488,7 @@ Validator functions:
 
  EXIST Overloaded MATLAB function, returnArg = arrayfun( @exist, Path.data ) ;
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -530,8 +515,7 @@ Validator functions:
 
  ISFOLDER Overloaded MATLAB function, returnArg = isfolder( Path.data ) ;
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -558,8 +542,7 @@ Validator functions:
 
  ISFOLDER Overloaded MATLAB function, returnArg = isfile( Path.data ) ;
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -586,8 +569,7 @@ Validator functions:
 
  SUBSREF Overloaded MATLAB function
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -626,8 +608,7 @@ When called with the single argument, `pathIn` is assigned the value of
 When called with > 2 inputs, resizing + recasting is applied successively to
 define the respective returns.
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -676,8 +657,7 @@ To help remember the function name, think "what -r" on the commandline, and
 See also
 WHAT
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -726,8 +706,7 @@ __ETC__
 See also
 FILEATTRIB, DIR
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -780,8 +759,7 @@ to one of the other two.
 See also
 CHAR,CELL,CELLSTR,STRING
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -832,8 +810,7 @@ here. For more info, refer to the MATLAB documentation:
 See also
 FILEATTRIB
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -858,8 +835,7 @@ FILEATTRIB
 
 **Synopsis**: _Returns an empty object array of the given size_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |

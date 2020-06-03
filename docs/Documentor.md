@@ -61,8 +61,7 @@ sample of Markdown text will display once reformatted to HTML
     Documentation for Documentor
        doc Documentor
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute            | Value |
@@ -95,8 +94,7 @@ sample of Markdown text will display once reformatted to HTML
 
   Default file extensions
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -130,8 +128,7 @@ sample of Markdown text will display once reformatted to HTML
 
   Supported .m file types (script, function, classdef)
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -168,8 +165,7 @@ See also
 Documentor.mustBeDocumentable
 Documentor.findfiles
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -204,8 +200,7 @@ Validator functions: Documentor.mustBeDocumentable
 
   String vector specifying the full file path for the printed documentation
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -241,8 +236,7 @@ Validator functions: mustBeStringScalarOrCharVector
 
   Documentation text content as a string vector 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -281,8 +275,7 @@ Validator functions:
 
 **Synopsis**: _Constructor_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -319,8 +312,7 @@ To overwrite existing files, use the above name-value argument pair.
 Output file paths and error messages are returned as string vectors to output
 arguments 1 and 2. Entries of `errMsg` are blank "" if printing succeeded without error.
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -345,8 +337,7 @@ arguments 1 and 2. Entries of `errMsg` are blank "" if printing succeeded withou
 
 **Synopsis**: _Documentor/draftdoc is an undocumented builtin Documentor method._ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -391,8 +382,7 @@ level above the base directory common to the paths among `Dr.mFiles`
 be). Failing that, "docs" will be in the temporary directory returned by
 MATLAB function `tempdir()`.
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -434,8 +424,7 @@ messes up the latter (see: Documentor.tableattributes)
 
 + replace instances of 'MATLAB' and/or 'MATLAB(R)' with 'MATLAB&reg;'
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -478,8 +467,7 @@ The output table will look like
 |   This    |  One  |
 |   That    |  Two  |
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -507,8 +495,7 @@ The output table will look like
 NOTE: for now, this is just nArgin/nArgout but this should be elaborated
 in Examiner.m -- e.g. by parsing the function arguments block when it exists
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -535,8 +522,7 @@ in Examiner.m -- e.g. by parsing the function arguments block when it exists
 
  DOCUMENTCLASSPROPERTIES Return string vector of class property documentation
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -563,8 +549,7 @@ in Examiner.m -- e.g. by parsing the function arguments block when it exists
 
  DOCUMENTCLASSMETHODS Return string vector of class method documentation
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -592,8 +577,7 @@ in Examiner.m -- e.g. by parsing the function arguments block when it exists
 Documents basic class attributes followed by class member documentation
 (courtesy of calls to `documentclassproperties` and `documentclassmethods`).
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -622,8 +606,7 @@ Documents basic class attributes followed by class member documentation
      [docStr] = documentbasic( Info )
      [docStr] = documentbasic( Info, headingLevel )
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -658,8 +641,7 @@ Throws an error if `mFile` does not meet the following requirements:
 - `mFile` points to a valid script, function, or classdef file, i.e.
 `ismember( Examiner.mfiletype( mFile ), ["script", "function","classdef"] ) == 1`
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -764,8 +746,7 @@ __ETC__
 See also
 FINDFILES
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -798,8 +779,7 @@ Calls `Examiner` to retrieve info on the file assigned to `Dr.mFile` and
 assigns a formatted string vector to `Dr.docContent` which can then be
 printed to file via `Dr.printdoc()`.
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -848,8 +828,7 @@ remote directory.
 for the Yml configuration file to work, the documentation must be in a
 folder called docs in the same folder
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -874,8 +853,7 @@ folder called docs in the same folder
 
 **Synopsis**: _Returns an empty object array of the given size_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |

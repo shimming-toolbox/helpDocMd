@@ -11,8 +11,7 @@ WIP
     Documentation for Advisor
        doc Advisor
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute            | Value |
@@ -43,8 +42,7 @@ WIP
 
 **Synopsis:** _Advisor/isCopying is a property._
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -81,8 +79,7 @@ WIP
 
 **Synopsis**: _Constructor_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -110,8 +107,7 @@ WIP
 
 ...
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -139,8 +135,7 @@ WIP
 
 ...
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -172,8 +167,7 @@ should also be able print to a new file.m (w/out overwrite option)
 
 DEFAULT.link[1]: http://en.wikipedia.org/wiki/Markdown        "Markdown"
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -203,8 +197,7 @@ DEFAULT.link[1]: http://en.wikipedia.org/wiki/Markdown        "Markdown"
 
 `function_template` returns the template as a string vector `txt`.
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -255,8 +248,7 @@ __DESCRIPTION__
 To suppress the print display, call the function with a return argument,
 e.g. using the dummy argument `[~] = txttable();`.
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -293,8 +285,7 @@ e.g. using the dummy argument `[~] = readme();`.
 When the first input is `[ 1 | true ]`, the `txt` is copied to the clipboard.
 This should be adequate for most cases: Paste to your file and begin editing.
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -319,8 +310,7 @@ This should be adequate for most cases: Paste to your file and begin editing.
 
 **Synopsis**: _Returns an empty object array of the given size_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |

@@ -34,8 +34,7 @@ available in the method documentation for Examiner.getmattributes.
     Documentation for Examiner
        doc Examiner
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute            | Value |
@@ -68,8 +67,7 @@ available in the method documentation for Examiner.getmattributes.
 
   .m file path: Attributes property will update whenever mFile is set
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -126,8 +124,7 @@ Remaining fields of Attributes vary depending on the type of file
 (i.e. Attributes.mType). For more info, see the method documentation:
 Examiner.getmattributes
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 | Attribute     | Value |
 |:-------------:|:-----:|
@@ -166,8 +163,7 @@ Validator functions:
 
 **Synopsis**: _Constructor_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -231,8 +227,7 @@ documentation states, does not check the contents of '.m' files.
 See also
 EXIST
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -370,8 +365,7 @@ See also
 - <https://www.mathworks.com/help/matlab/ref/meta.property.html>
 - <https://www.mathworks.com/help/matlab/ref/meta.validation-class.html meta.Validation>
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -399,8 +393,7 @@ See also
 
 mHelp = GETHELPTEXT( name )
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -454,8 +447,7 @@ __ETC__
 See also
 Examiner.gethelptext
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -499,8 +491,7 @@ See also
 -Examiner.gethelptext
 -Examiner.extracthelpheader
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -533,8 +524,7 @@ copied to the fields of struct Att
 
 TODO : restructuring of meta.Validation.Size
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
@@ -559,8 +549,7 @@ TODO : restructuring of meta.Validation.Size
 
 **Synopsis**: _Returns an empty object array of the given size_ 
 
-<details>
-<summary><b>Details</b></summary>
+<details markdown="block">
  
 
 | Attribute          | Value |
