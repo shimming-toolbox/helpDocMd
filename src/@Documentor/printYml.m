@@ -39,28 +39,28 @@ elseif nargin == 3
     if ~isfield(Params, 'theme')
         Params.theme = 'material' ;
     else
-        mustBeStringOrChar( Params.theme ) ;
+        valid.mustBeStringOrChar( Params.theme ) ;
         Params.theme = char(Params.theme) ;
     end
     
     if ~isfield(Params, 'projectName')
         Params.projectName = 'Your_Project' ;
     else
-        mustBeStringOrChar( Params.projectName ) ;
+        valid.mustBeStringOrChar( Params.projectName ) ;
         Params.projectName = char(Params.projectName) ;
     end
     
     if ~isfield(Params, 'home')
         Params.home = 'index.md' ;
     else
-        mustBeStringOrChar( Params.home ) ;
+        valid.mustBeStringOrChar( Params.home ) ;
         Params.home = char(Params.home) ;
     end
     
     if ~isfield(Params, 'repoURL')
         Params.repoURL = '' ;
     else
-        mustBeStringOrChar( Params.repoURL ) ;
+        valid.mustBeStringOrChar( Params.repoURL ) ;
         Params.repoURL = char(Params.repoURL) ;        
     end
 else

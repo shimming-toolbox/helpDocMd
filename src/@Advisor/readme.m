@@ -39,8 +39,8 @@ function [txt] = readme( isCopying, S )
 % 3. Section bullets (character vectors preceding each section heading 
 % [default: '#' repeated n=depth-level times]
     arguments
-        isCopying(1,1) {mustBeBoolean}     = false ;
-        S(:,:) { mustBeA( S, "string" ) } = DEFAULT_S ;
+        isCopying(1,1) {valid.mustBeBoolean}     = false ;
+        S(:,:) { valid.mustBeA( S, "string" ) } = DEFAULT_S ;
     end
 
 % Total number of sections incl. title
@@ -227,7 +227,7 @@ end
 % %         sections(:,:) 
 % %         Specs(1,1) struct                         = getdefaultcontents ; 
 % %         isLinked ...
-% %         isCopying(1,1) {mustBeBoolean}            = true ;
-% %         filename {mustBeStringScalarOrCharVector} = "README.md" ;
+% %         isCopying(1,1) {valid.mustBeBoolean}            = true ;
+% %         filename {valid.mustBeStringScalarOrCharVector} = "README.md" ;
 % %         isOverwriting(1,1)                        = false ;
 % %     end

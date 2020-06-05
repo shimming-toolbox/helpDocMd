@@ -19,7 +19,7 @@ function [] = mustBeFolder( A )
 % <https://www.mathworks.com/help/matlab/matlab_prog/argument-validation-functions.html validation functions> 
 %%
     arguments
-        A {mustBeStringOrCharOrCellstr} ;
+        A {valid.mustBeStringOrCharOrCellstr} ;
     end
 
 A      = strip( string( A ) ) ;

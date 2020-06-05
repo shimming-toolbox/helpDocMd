@@ -27,11 +27,11 @@ function [txt] = txttable( isCopying, nSize, nCharPerCell, prefix )
 % To suppress the print display, call the function with a return argument, 
 % e.g. using the dummy argument `[~] = txttable();`.
     arguments
-        isCopying(1,1) {mustBeBoolean}                     = false ;
+        isCopying(1,1) {valid.mustBeBoolean}                     = false ;
         nSize(1,2) {mustBePositive, mustBeInteger}         = [3 2] ;
         nCharPerCell(1,2) {mustBePositive, mustBeInteger}  = [1 10] ;
-        prefix {mustBeStringScalarOrCharVector}            = "%    " ; 
-        % fName {mustBeStringScalarOrCharVector}             = tempname ;
+        prefix {valid.mustBeStringScalarOrCharVector}            = "%    " ; 
+        % fName {valid.mustBeStringScalarOrCharVector}             = tempname ;
     end
 
 %------------------------------ 

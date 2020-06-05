@@ -80,8 +80,8 @@ function [mFiles] = findfiles( src, isRecursive )
 % See also
 % FINDFILES
     arguments
-        src {mustBeStringOrCharOrCellstr} ;
-        isRecursive(1,1) {mustBeBoolean} = true ;
+        src {valid.mustBeStringOrCharOrCellstr} ;
+        isRecursive(1,1) {valid.mustBeBoolean} = true ;
     end
 
 % TODO: make Pathologist initialize `data` w/full paths when possible...

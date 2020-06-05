@@ -113,7 +113,7 @@ function [Att] = getmattributes( mFile )
 % - <https://www.mathworks.com/help/matlab/ref/meta.property.html>
 % - <https://www.mathworks.com/help/matlab/ref/meta.validation-class.html meta.Validation>
     arguments
-        mFile {mustBeStringOrChar, mustBeFile} = which("getmattributes.m") ;  
+        mFile {valid.mustBeStringOrChar, valid.mustBeFile} = which("getmattributes.m") ;  
     end
 
 [mFolder, Att.Name]        = fileparts( mFile ) ;

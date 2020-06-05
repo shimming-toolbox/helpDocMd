@@ -48,7 +48,7 @@ function [parentDir] = parent( pathIn, level )
 % See also
 % FILEPARTS
     arguments
-        pathIn {mustBeStringOrCharOrCellstr}
+        pathIn {valid.mustBeStringOrCharOrCellstr}
         level {mustBeMember(level,["single" "common"])} = "single" ;
     end
     

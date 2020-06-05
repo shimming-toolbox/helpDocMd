@@ -33,7 +33,7 @@ classdef Examiner
 properties( AbortSet = true )
 
     % .m file path: Attributes property will update whenever mFile is set
-    mFile {mustBeFile} = string( [ mfilename('fullpath') '.m'] ) ;
+    mFile {valid.mustBeFile} = string( [ mfilename('fullpath') '.m'] ) ;
 
 end
 
@@ -78,7 +78,7 @@ function [ Info ] = Examiner( mFile )
     if nargin == 0
         return ;
     else
-        mustBeStringOrChar( mFile ) ;
+        valid.mustBeStringOrChar( mFile ) ;
     end
 
     if ~isfile( mFile )

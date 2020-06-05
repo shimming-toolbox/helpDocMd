@@ -36,11 +36,11 @@ function [paths, List] = findfiles( sFolder, sPattern, isRecursive, isExcludingH
 % See also 
 % DIR — https://www.mathworks.com/help/matlab/ref/dir.html
     arguments
-        sFolder(1,:) { mustBeStringScalarOrCharVector, mustBeFolder } = "." ;
-        sPattern  {mustBeStringOrCharOrCellstr} = "*.*" ;    
-        isRecursive(1,1) {mustBeBoolean} = true ;
-        isExcludingHidden(1,1) {mustBeBoolean} = true ;
-        returnType(1,:) { mustBeStringScalarOrCharVector, ...
+        sFolder(1,:) { valid.mustBeStringScalarOrCharVector, valid.mustBeFolder } = "." ;
+        sPattern  {valid.mustBeStringOrCharOrCellstr} = "*.*" ;    
+        isRecursive(1,1) {valid.mustBeBoolean} = true ;
+        isExcludingHidden(1,1) {valid.mustBeBoolean} = true ;
+        returnType(1,:) { valid.mustBeStringScalarOrCharVector, ...
             mustBeMember( returnType, ["files" "folders" "both"] ) } = "files" ;
     end
 

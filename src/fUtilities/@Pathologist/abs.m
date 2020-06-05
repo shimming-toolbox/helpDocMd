@@ -26,7 +26,7 @@ function [ pathOut, pathType ] = abs( pathIn )
 % See also 
 % FILEATTRIB 
     arguments
-        pathIn { mustBeStringOrCharOrCellstr } ;
+        pathIn { valid.mustBeStringOrCharOrCellstr } ;
     end
 
     P = Pathologist( pathIn ) ;

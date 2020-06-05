@@ -39,7 +39,7 @@ function [mType, mPath, mExist] = mfiletype( mFile )
 % See also
 % EXIST
     arguments
-        mFile { mustBeA( mFile, ["string" "char" "cellstr"] ) } ;
+        mFile { valid.mustBeA( mFile, ["string" "char" "cellstr"] ) } ;
     end
 
 % pos. TODO? Enable optional keyword input (e.g. function name) and defer to it

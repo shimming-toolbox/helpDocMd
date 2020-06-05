@@ -19,7 +19,7 @@ function [mHelpBody] = extracthelpbody( mHelp )
 % -Examiner.gethelptext
 % -Examiner.extracthelpheader 
     arguments
-        mHelp {mustBeStringOrCharOrCellstr} ;
+        mHelp {valid.mustBeStringOrCharOrCellstr} ;
     end
     
 if iscellstr( mHelp ) || ischar( mHelp )
