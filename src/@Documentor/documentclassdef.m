@@ -17,7 +17,7 @@ docStr = Documentor.documentbasic( Info ) ;
 Info = rmfield( Info, {'mType' ; 'Name' ; 'Description' ; 'DetailedDescription'} ) ;
 
 if isDropdown % insert in HTML dropdown 
-    docStr = [ docStr ; "<details markdown=""block"">" ; " " ] ;
+    docStr = [ docStr ; "<details markdown=""block"">" ; "<summary><b>Details</b></summary>"; " " ] ;
 end 
 
 %% Place basic (logical) attributes into markdown table

@@ -1,10 +1,10 @@
 classdef Documentor < handle
-% DOCUMENTOR _.m_bedded `doc`s to .md text files
+% DOCUMENTOR .m-bedded `doc`'s to .md text files
 %
 % Documentor (re)publishes embedded source code documentation to text files
 % (i.e. as [Markdown](https://daringfireball.net/projects/markdown/)).
 % 
-% **Refer to the README document for basic usage.**
+% **Refer to the README for basic usage.**
 % 
 % __CONSTRUCTOR SYNTAX__ 
 % 
@@ -15,9 +15,9 @@ classdef Documentor < handle
 % in which to search for them. 
 %
 % The constructor calls the methods `draftcontent` and `autoassigndocfiles`, 
-% which respectively set the properties:  
-% -`docContent`: the documentation text content, and  
-% -`docFile`: the output filepath for the published documentation.
+% which respectively set the properties:   
+% - `docContent`: the documentation text content, and  
+% - `docFile`: the output filepath for the published documentation.
 %
 % Both of which can be reconfigured prior to publishing to file via `printdoc()`.
 %
@@ -26,15 +26,16 @@ classdef Documentor < handle
 % The constructor accepts a struct of `Options` parameters, with the following
 % supported fields. 
 %
-% -`Options.detailLevel`: Specifies the degree of detail to include when
+% - `Options.detailLevel`: Specifies the degree of detail to include when
 % generating documentation via `draftcontent()`.
 %
-% -`Options.outputDir`: specifies the *primary* folder for the printed
+% - `Options.outputDir`: specifies the *primary* folder for the printed
 % documentation files, used in the call to `autoassigndocfiles()`.
 % 
 % For more info, refer to the documentation for the corresponding methods.
 %
 % __TIPS__
+%
 % 1. Verify that the assignments to `docFile` are indeed suitable prior
 % to calling `printdoc`.
 %
@@ -52,7 +53,8 @@ classdef Documentor < handle
 % `Documentor.findfiles` and `Documentor.mustBeDocumentable`.
 %
 % __ETC__  
-% -[test](https://daringfireball.net/projects/markdown/dingus) how a
+%
+% - [test](https://daringfireball.net/projects/markdown/dingus) how a
 % sample of Markdown text will display once reformatted to HTML
 
 properties( Constant, Hidden )
