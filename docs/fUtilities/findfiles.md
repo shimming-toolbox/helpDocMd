@@ -5,12 +5,14 @@
 **Synopsis:** _Search a directory for filenames matching a pattern_
 
       
-     [paths, List] = findfiles( sFolder, sPattern, isRecursive, isExcludingHidden, returnType )  
+     [paths, List] = findfiles( sFolder, sPattern, isRecursive, ...
+                                isExcludingHidden, returnType )  
 
 Looks for files and/or subfolders in `sFolder` with names matching `sPattern`
-by calling Matlab function [dir] and returns the file paths as elements of a
-string column vector `paths`. The single-element structs output by `dir()`
-are arrayed and returned as `List.
+by calling Matlab function `dir()` and returns the file paths as elements of a
+string column vector `paths`.
+
+Scalar structs output by dir() are concatenated and returned as `List`.
 
 __INPUTS__
       
@@ -19,8 +21,8 @@ __INPUTS__
 
     sPattern=["*.*"]  
       The searchPattern of interest. If provided as a string array, patterns
-      are searched successively. (The default corresponds to including  all
-      files with explicit with explicit file extensions.)
+      are searched successively. (The default corresponds to including all
+      files with explicit file extensions.)
 
     isRecursive=[true|1]  
       Toggle to include (1) or exclude (0) subdirectories in the search.
@@ -33,12 +35,10 @@ __INPUTS__
       Selects what type of path elements are retained in the two outputs:  
       Options are: "files", "folders", or "both".
 
-ETC
+__ETC__
 
-    For more info, refer to the documentation for  
-    [dir](https://www.mathworks.com/help/matlab/ref/dir.html)  
-
-See also DIR
+See also
+DIR — https://www.mathworks.com/help/matlab/ref/dir.html
 
     Other functions named findfiles
 

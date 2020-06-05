@@ -10,7 +10,7 @@ function [mHelpHeader] = extracthelpheader( mHelp, name )
 %
 % __EXAMPLE__
 %
-%    mHelp = Informer.gethelptext( 'Informer.gethelptext' ) 
+%    mHelp = Examiner.gethelptext( 'Examiner.gethelptext' ) 
 % 
 % % diplays:
 % %
@@ -18,7 +18,7 @@ function [mHelpHeader] = extracthelpheader( mHelp, name )
 % %  ""
 % % "mHelp = GETHELPTEXT( name )"
 % 
-%    Informer.extracthelpheader( mHelp, "GETHELPTEXT" )
+%    Examiner.extracthelpheader( mHelp, "GETHELPTEXT" )
 %
 % % diplays:
 % %
@@ -27,7 +27,7 @@ function [mHelpHeader] = extracthelpheader( mHelp, name )
 % __ETC__
 %
 % See also
-% Informer.gethelptext
+% Examiner.gethelptext
     arguments
         mHelp {mustBeStringOrCharOrCellstr} ;
         name {mustBeStringOrChar} = "" ;

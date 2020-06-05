@@ -1,22 +1,40 @@
-function [tableStr] = tableattributes( Attributes )  
-%TABLEATTRIBUTES Return html-table of class/classmember attributes 
+function [txtTable] = tableattributes( Attributes )  
+%TABLEATTRIBUTES Return markdown text table of class/classmember attributes 
+%     
+%     txtTable = tableattributes( Attributes )
+% 
+% `Attributes` is a struct of class member attributes and `txtTable` is
+% returned as string vector where each element is a row in a dual-column table.
+% 
+% For instance, if `Attributes` possesses the 2 fields 
+% ```
+% Attributes.This = "One";
+% Attributes.That = "Two";
+% ```
+% The output table will look like
 %
-% tableStr = GETHELPTEXT( Attributes )
+% | Attribute | Value |
+% |:---------:|:-----:|
+% |   This    |  One  |
+% |   That    |  Two  |
+    arguments
+        Attributes struct;
+    end
 
-fields = string( fieldnames( Attributes ) ) ;
+column1 = pad([ " Attribute " ; ":-"; " " + string( fieldnames( Attributes ) ) + " " ]) ;
+column2 = pad([ " Value " ; ":-"; " " + string(struct2cell(Attributes)) + " " ])  ;
 
-titles = "<table border=1><tr>" ; % title row
-values = "<tr>" ;
+% Center contents
+column1{2}(end) = ':';
+column2{2}(end) = ':';
 
-for iField = 1 : numel( fields )
-    field = fields( iField ) ;
-    titles = titles + "<th>"+ field + "</th>" ;
-    values =  values+ "<td>"+ string( Attributes.( field ) ) + "</td>" ;
-end
+column1(2) = replace( column1(2), " ", "-" ) ;
+column2(2) = replace( column2(2), " ", "-" ) ;
 
-titles = titles + "</tr>" ;
-values = values+ "</tr>"  ;
+% Borders
+column1 = "|" + column1 ;
+column2 = "|" + column2 + "|";
 
-tableStr = [ "<table>" ; titles; values ; "</table>" ] ;
+txtTable = column1 + column2 ;
 
 end

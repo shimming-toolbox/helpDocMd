@@ -24,35 +24,53 @@ zeitgeist due to COVID-19, "Pathologist" seems an appropriate moniker.
     Documentation for Pathologist
        doc Pathologist
 
+<details markdown="block">
+ 
 
-__ATTRIBUTES__
-
-
-<table>
-<table border=1><tr><th>Hidden</th><th>Sealed</th><th>Abstract</th><th>Enumeration</th><th>ConstructOnLoad</th><th>HandleCompatible</th><th>RestrictsSubclassing</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute            | Value |
+|:--------------------:|:-----:|
+| Hidden               | false |
+| Sealed               | false |
+| Abstract             | false |
+| Enumeration          | false |
+| ConstructOnLoad      | false |
+| HandleCompatible     | false |
+| RestrictsSubclassing | false |
 
 - InferiorClasses : [N/A] 
 - ContainingPackage : [N/A] 
 - EventList : [N/A] 
 - EnumerationMemberList : [N/A] 
 - SuperclassList : [N/A] 
+ 
+</details>
 
 - - -
 ## Properties
 
-
+ 
+-----
+ 
 ### typeIn
 
 **Synopsis:** _Input data-type (aka 'class')_
 
   Input data-type (aka 'class') 
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | false |
+| HasDefault    | true  |
 
 - GetAccess : private
 - SetAccess : private
@@ -64,15 +82,29 @@ __ATTRIBUTES__
 Class: string
 Validator functions: @(typeIn)mustBeMember(typeIn,["string","char","cell"])
 - DefiningClass : Pathologist
-
+ 
+</details>
+ 
+-----
+ 
 ### sizeIn
 
 **Synopsis:** _Pathologist/sizeIn is a property._
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | false |
+| HasDefault    | true  |
 
 - GetAccess : private
 - SetAccess : private
@@ -82,17 +114,31 @@ Validator functions: @(typeIn)mustBeMember(typeIn,["string","char","cell"])
 - DefaultValue : [N/A] 
 - Validation : [N/A] 
 - DefiningClass : Pathologist
-
+ 
+</details>
+ 
+-----
+ 
 ### data
 
 **Synopsis:** _Path data: real or fictitious files or folders_
 
   Path data: real or fictitious files or folders
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | false |
+| HasDefault    | true  |
 
 - GetAccess : public
 - SetAccess : public
@@ -103,7 +149,11 @@ Validator functions: @(typeIn)mustBeMember(typeIn,["string","char","cell"])
 - Validation: 
 Validator functions: mustBeString
 - DefiningClass : Pathologist
-
+ 
+</details>
+ 
+-----
+ 
 ### typeOut
 
 **Synopsis:** _Sets the return datatype (class) of path info as "string" "char" or "cell"_
@@ -111,10 +161,20 @@ Validator functions: mustBeString
 
 (Default is whatever data type was used to initialize the object.)
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | false |
+| HasDefault    | true  |
 
 - GetAccess : public
 - SetAccess : public
@@ -126,17 +186,31 @@ Validator functions: mustBeString
 Class: string
 Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 - DefiningClass : Pathologist
-
+ 
+</details>
+ 
+-----
+ 
 ### files
 
 **Synopsis:** _list of files among Path.data_
 
   list of files among Path.data
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | true  |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | true  |
+| HasDefault    | false |
 
 - GetAccess : public
 - SetAccess : public
@@ -146,17 +220,31 @@ Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 - DefaultValue : 
 - Validation : [N/A] 
 - DefiningClass : Pathologist
-
+ 
+</details>
+ 
+-----
+ 
 ### folders
 
 **Synopsis:** _list of folders among Path.data_
 
   list of folders among Path.data
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | true  |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | true  |
+| HasDefault    | false |
 
 - GetAccess : public
 - SetAccess : public
@@ -166,17 +254,31 @@ Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 - DefaultValue : 
 - Validation : [N/A] 
 - DefiningClass : Pathologist
-
+ 
+</details>
+ 
+-----
+ 
 ### subfolders
 
 **Synopsis:** _of each folder element of Path.data_
 
   subfolders of each folder element of Path.data
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | true  |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | true  |
+| HasDefault    | false |
 
 - GetAccess : public
 - SetAccess : public
@@ -186,17 +288,31 @@ Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 - DefaultValue : 
 - Validation : [N/A] 
 - DefiningClass : Pathologist
-
+ 
+</details>
+ 
+-----
+ 
 ### nPaths
 
 **Synopsis:** _Number of input paths_
 
   Number of input paths
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | true  |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | true  |
+| HasDefault    | false |
 
 - GetAccess : public
 - SetAccess : public
@@ -206,17 +322,31 @@ Validator functions: @(typeOut)mustBeMember(typeOut,["string","char","cell"])
 - DefaultValue : 
 - Validation : [N/A] 
 - DefiningClass : Pathologist
-
+ 
+</details>
+ 
+-----
+ 
 ### parentDir
 
 **Synopsis:** _Path(s) to immediate parent folder(s) (single level)_
 
 Main doc. entry (for now?): parent.m
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | true  |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | true  |
+| HasDefault    | false |
 
 - GetAccess : public
 - SetAccess : public
@@ -226,7 +356,11 @@ Main doc. entry (for now?): parent.m
 - DefaultValue : 
 - Validation : [N/A] 
 - DefiningClass : Pathologist
-
+ 
+</details>
+ 
+-----
+ 
 ### baseDir
 
 **Synopsis:** _Deepest common parent folder (the "fork")_
@@ -234,10 +368,20 @@ Main doc. entry (for now?): parent.m
 `if Path.nPaths == 1, Path.baseDir = Path.parentDir`
 Main doc. entry (for now?): parent.m
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | true  |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | true  |
+| HasDefault    | false |
 
 - GetAccess : public
 - SetAccess : public
@@ -248,6 +392,8 @@ Main doc. entry (for now?): parent.m
 - Validation: 
 Validator functions: 
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 ## Methods
@@ -263,55 +409,48 @@ Validator functions:
 
 `Path.isValid = [ Path.isfile | Path.isfolder ]`
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : Path
 - OutputNames : isValid
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
 
 ### Pathologist
 
-**Synopsis**: _File path utility class_ 
+**Synopsis**: _Constructor_ 
 
-      
-      PathO = Pathologist( pathIn ) ;
+<details markdown="block">
+ 
 
-Recasts the array of file paths `pathIn` as a `Pathologist` object,
-containing simple+convenient methods for handling paths to files and folders.
-
-Since a path designation in MATLAB can take one of three forms (char-,
-string-, or cellstr-array), a primary purpose the class is merely to provide
-a convenient means of handling the different implementations. Namely, a set
-of input paths will always, first, be typecast as a string and stored as the
-property `data`. After processing via any `Pathologist` methods, paths are
-returned in the form of their input (see Pathologist.returnasinput).
-
-**NOTE** The name `pathtool` already being taken by a builtin MATLAB
-function, in keeping with the `Doc. Md.` theme and the unfortunately current
-zeitgeist due to COVID-19, "Pathologist" seems an appropriate moniker.
-
-
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : pathIn
 - OutputNames : Path
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -322,18 +461,23 @@ zeitgeist due to COVID-19, "Pathologist" seems an appropriate moniker.
 
  FILEPARTS Overloaded MATLAB function: [filepath,name,ext] = arrayfun( @fileparts, Path.data ) ;
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : Path
 - OutputNames : folder, name, ext
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -344,18 +488,23 @@ zeitgeist due to COVID-19, "Pathologist" seems an appropriate moniker.
 
  EXIST Overloaded MATLAB function, returnArg = arrayfun( @exist, Path.data ) ;
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : Path
 - OutputNames : mExist
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -366,18 +515,23 @@ zeitgeist due to COVID-19, "Pathologist" seems an appropriate moniker.
 
  ISFOLDER Overloaded MATLAB function, returnArg = isfolder( Path.data ) ;
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : Path
 - OutputNames : isDir
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -388,18 +542,23 @@ zeitgeist due to COVID-19, "Pathologist" seems an appropriate moniker.
 
  ISFOLDER Overloaded MATLAB function, returnArg = isfile( Path.data ) ;
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : Path
 - OutputNames : isFilepath
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -410,18 +569,23 @@ zeitgeist due to COVID-19, "Pathologist" seems an appropriate moniker.
 
  SUBSREF Overloaded MATLAB function
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : Path, S
 - OutputNames : pathOut
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -444,18 +608,23 @@ When called with the single argument, `pathIn` is assigned the value of
 When called with > 2 inputs, resizing + recasting is applied successively to
 define the respective returns.
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : private
 - InputNames : Path, varargin
 - OutputNames : varargout
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -488,18 +657,23 @@ To help remember the function name, think "what -r" on the commandline, and
 See also
 WHAT
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : Info
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -532,18 +706,23 @@ __ETC__
 See also
 FILEATTRIB, DIR
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : dirs
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -580,18 +759,23 @@ to one of the other two.
 See also
 CHAR,CELL,CELLSTR,STRING
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : txtOut
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -626,18 +810,23 @@ here. For more info, refer to the MATLAB documentation:
 See also
 FILEATTRIB
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : pathOut, pathType
 - DefiningClass : Pathologist
+ 
+</details>
 
 ---
 
@@ -646,15 +835,20 @@ FILEATTRIB
 
 **Synopsis**: _Returns an empty object array of the given size_ 
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : E
 - DefiningClass : Pathologist
+ 
+</details>

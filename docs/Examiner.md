@@ -1,26 +1,26 @@
-# Informer
+# Examiner
 
 **Filetype:** _MATLAB&reg; classdef_
 
 **Synopsis:** _Details the functionality of a .m file_
 
-The `Informer` class informs the `Documentor` class about the contents of .m
+The `Examiner` class informs the `Documentor` class about the contents of .m
 files: providing the functional details needed to document them.
 
 In general, the class works behind the scenes and would not be directly
-called upon by a user; however, an Informer object can be constructed
+called upon by a user; however, an Examiner object can be constructed
 independently as indicated below.
 
 __CONSTRUCTOR SYNTAX__
       
-      Info = Informer( mFile ) ;
+      Info = Examiner( mFile ) ;
 
-Creates an `Informer` object pertaining to .m file (a script, function, class
+Creates an `Examiner` object pertaining to .m file (a script, function, class
 method, or classdef file) pointed to by the path string `mFile`.
 If `mFile` contains multiple files, then `Info` is returned as an
 object-array.
 
-`Informer` has but two properties: `mFile` and `Attributes`.
+`Examiner` has but two properties: `mFile` and `Attributes`.
 
 `Attributes` is a struct containing all available functional details
 regarding `mFile`.
@@ -29,60 +29,82 @@ regarding `mFile`.
 
 The read-only fields of `Attributes` depend on the given .m-file type and
 should be fairly self-explanatory given the field names. More detail is
-available in the method documentation for Informer.getmattributes.
+available in the method documentation for Examiner.getmattributes.
 
-    Documentation for Informer
-       doc Informer
+    Documentation for Examiner
+       doc Examiner
 
+<details markdown="block">
+ 
 
-__ATTRIBUTES__
-
-
-<table>
-<table border=1><tr><th>Hidden</th><th>Sealed</th><th>Abstract</th><th>Enumeration</th><th>ConstructOnLoad</th><th>HandleCompatible</th><th>RestrictsSubclassing</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute            | Value |
+|:--------------------:|:-----:|
+| Hidden               | false |
+| Sealed               | false |
+| Abstract             | false |
+| Enumeration          | false |
+| ConstructOnLoad      | false |
+| HandleCompatible     | false |
+| RestrictsSubclassing | false |
 
 - InferiorClasses : [N/A] 
 - ContainingPackage : [N/A] 
 - EventList : [N/A] 
 - EnumerationMemberList : [N/A] 
 - SuperclassList : [N/A] 
+ 
+</details>
 
 - - -
 ## Properties
 
-
+ 
+-----
+ 
 ### mFile
 
 **Synopsis:** _.m file path: Attributes property will update whenever mFile is set_
 
   .m file path: Attributes property will update whenever mFile is set
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>false</td><td>true</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | true  |
+| NonCopyable   | false |
+| HasDefault    | true  |
 
 - GetAccess : public
 - SetAccess : public
 - PartialMatchPriority : [N/A] 
 - GetMethod : 
-- SetMethod : Informer.set.mFile
-- DefaultValue : /Users/ryan/Projects/General/scripts/shim/helpDocMd/src/@Informer/Informer.m
+- SetMethod : Examiner.set.mFile
+- DefaultValue : /Users/ryan/Projects/General/scripts/helpDocMd/src/@Examiner/Examiner.m
 - Validation: 
 Validator functions: mustBeFile
-- DefiningClass : Informer
-
+- DefiningClass : Examiner
+ 
+</details>
+ 
+-----
+ 
 ### Attributes
 
 **Synopsis:** _Functional description of the .m file_
 
 Attributes is a struct of .m file attributes, returned from a call to
-Informer.getmattributes( mFile ). It contains the following basic
+Examiner.getmattributes( mFile ). It contains the following basic
 fields:
 
-- mType: Type of .m file: string scalar returned from Informer.mfiletype( mFile ).
+- mType: Type of .m file: string scalar returned from Examiner.mfiletype( mFile ).
 Possibilities are: ["script","function","classdef","method","NA"]
     
 - .Name: Name of the script, function, class or class method
@@ -91,21 +113,31 @@ If the .m file is a valid MATLAB file (i.e. mType ~= "NA"), then
 Attributes also contains fields:
 
 - .Description: Header line of help-text (string vector returned from
-    Informer.extracthelpheader) 
+    Examiner.extracthelpheader) 
 
 - .DetailedDescription: Body of help-text (string vector returned from
-    Informer.extracthelpbody) 
+    Examiner.extracthelpbody) 
 
 ### References ###
 
 Remaining fields of Attributes vary depending on the type of file
 (i.e. Attributes.mType). For more info, see the method documentation:
-Informer.getmattributes
+Examiner.getmattributes
 
-<table>
-<table border=1><tr><th>Dependent</th><th>Constant</th><th>Abstract</th><th>Transient</th><th>Hidden</th><th>GetObservable</th><th>SetObservable</th><th>AbortSet</th><th>NonCopyable</th><th>HasDefault</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+<details markdown="block">
+ 
+| Attribute     | Value |
+|:-------------:|:-----:|
+| Dependent     | false |
+| Constant      | false |
+| Abstract      | false |
+| Transient     | false |
+| Hidden        | false |
+| GetObservable | false |
+| SetObservable | false |
+| AbortSet      | false |
+| NonCopyable   | false |
+| HasDefault    | false |
 
 - GetAccess : public
 - SetAccess : private
@@ -116,7 +148,9 @@ Informer.getmattributes
 - Validation: 
 Class: struct
 Validator functions: 
-- DefiningClass : Informer
+- DefiningClass : Examiner
+ 
+</details>
 
 ---
 ## Methods
@@ -125,49 +159,27 @@ Validator functions:
 ---
 
 
-### Informer
+### Examiner
 
-**Synopsis**: _Details the functionality of a .m file_ 
+**Synopsis**: _Constructor_ 
 
-The `Informer` class informs the `Documentor` class about the contents of .m
-files: providing the functional details needed to document them.
+<details markdown="block">
+ 
 
-In general, the class works behind the scenes and would not be directly
-called upon by a user; however, an Informer object can be constructed
-independently as indicated below.
-
-__CONSTRUCTOR SYNTAX__
-      
-      Info = Informer( mFile ) ;
-
-Creates an `Informer` object pertaining to .m file (a script, function, class
-method, or classdef file) pointed to by the path string `mFile`.
-If `mFile` contains multiple files, then `Info` is returned as an
-object-array.
-
-`Informer` has but two properties: `mFile` and `Attributes`.
-
-`Attributes` is a struct containing all available functional details
-regarding `mFile`.
-
-`Attributes` cannot be set directly, but is updated whenever `mFile` is set.
-
-The read-only fields of `Attributes` depend on the given .m-file type and
-should be fairly self-explanatory given the field names. More detail is
-available in the method documentation for Informer.getmattributes.
-
-
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | false |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : mFile
 - OutputNames : Info
-- DefiningClass : Informer
+- DefiningClass : Examiner
+ 
+</details>
 
 ---
 
@@ -185,14 +197,14 @@ char-, or cellstr-] array of file paths `mFile` and returns:
 
 1. `mType` a string vector with entries
 
-`mType(i)`| when input `mFile(i)` is...
-----------|-----------------------------------------------------------------|
-"script"  | a script file
-"function"| a function file (even one with void arguments)
-"classdef"| a class definition file
-"method"  | a .m function (~=constructor) in a folder beginning with "@"
-    "NA"    | an unimplemented or non-Matlab file with a .m file extension
-     ""     | an invalid file path (e.g. folder, non-Matlab, or non-existent)
+|`mType(i)`| when input `mFile(i)` is...
+|:--------:|-----------------------------------------------------------------|
+|"script"  | a script file
+|"function"| a function file (even one with void arguments)
+|"classdef"| a class definition file
+|"method"  | a .m function (~=constructor) in a folder beginning with "@"
+|  "NA"    | an unimplemented or non-Matlab file with a .m file extension
+|  " "     | an invalid file path (e.g. folder, non-Matlab, or non-existent)
 
 2.`mPath` a string vector of the full file system paths.
 
@@ -215,18 +227,23 @@ documentation states, does not check the contents of '.m' files.
 See also
 EXIST
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : mType, mPath, mExist
-- DefiningClass : Informer
+- DefiningClass : Examiner
+ 
+</details>
 
 ---
 
@@ -250,10 +267,10 @@ __OUTPUT__
     - .Name: Name of the script, function, class or class method 
         
     - .Description: Header line of help-text (string vector returned from
-    Informer.extracthelpheader) 
+    Examiner.extracthelpheader) 
 
     - .DetailedDescription: Body of help-text (string vector returned from
-    Informer.extracthelpbody) 
+    Examiner.extracthelpbody) 
 
 1. Function files
 
@@ -327,7 +344,7 @@ would actually make them meaningful (at least, not as of MATLAB 2019b).
 (Hence, for now, although the .Description and .DetailedDescription fields of
 the returned attributes struct borrow their field names from (nominal)
 meta.class properties, these are fields are actually assigned independently
-of meta.class by calls to Informer methods: gethelptext(), extracthelpheader()
+of meta.class by calls to Examiner methods: gethelptext(), extracthelpheader()
 and extracthelpbody().)
 
 Furthermore, the current implementation of meta.class exhibits some curious behaviour:
@@ -340,26 +357,31 @@ __ETC__
 
 See also
 
-- Informer.mfiletype
-- Informer.gethelptest
-- Informer.gethelpbody
-- Informer.gethelpheader
+- Examiner.mfiletype
+- Examiner.gethelptest
+- Examiner.gethelpbody
+- Examiner.gethelpheader
 - <https://www.mathworks.com/help/matlab/ref/meta.class.html meta.class>
 - <https://www.mathworks.com/help/matlab/ref/meta.property.html>
 - <https://www.mathworks.com/help/matlab/ref/meta.validation-class.html meta.Validation>
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : Att
-- DefiningClass : Informer
+- DefiningClass : Examiner
+ 
+</details>
 
 ---
 
@@ -371,18 +393,23 @@ See also
 
 mHelp = GETHELPTEXT( name )
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : mHelp
-- DefiningClass : Informer
+- DefiningClass : Examiner
+ 
+</details>
 
 ---
 
@@ -401,7 +428,7 @@ returned string.
 
 __EXAMPLE__
 
-     mHelp = Informer.gethelptext( 'Informer.gethelptext' ) 
+     mHelp = Examiner.gethelptext( 'Examiner.gethelptext' ) 
 
 % diplays:
 %
@@ -409,7 +436,7 @@ __EXAMPLE__
 %  ""
 % "mHelp = GETHELPTEXT( name )"
 
-     Informer.extracthelpheader( mHelp, "GETHELPTEXT" )
+     Examiner.extracthelpheader( mHelp, "GETHELPTEXT" )
 
 % diplays:
 %
@@ -418,20 +445,25 @@ __EXAMPLE__
 __ETC__
 
 See also
-Informer.gethelptext
+Examiner.gethelptext
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : mHelpHeader
-- DefiningClass : Informer
+- DefiningClass : Examiner
+ 
+</details>
 
 ---
 
@@ -443,34 +475,39 @@ Informer.gethelptext
       
       mHelpBody = EXTRACTHELPBODY( mHelp ) ;
 
-EXTRACTHELPBODY returns a body of help-text (i.e. from Informer.gethelptext)
+EXTRACTHELPBODY returns a body of help-text (i.e. from Examiner.gethelptext)
 and trims it of its leading line of text. (If the text consists solely of the
 leading line, then this line is returned.)
 
 __EXAMPLE__
 ```
 % To display the current section of text, without the title line:
-mHelpBody = Informer.extracthelpbody( Informer.gethelptext( 'Informer.extracthelpbody' ) )
+mHelpBody = Examiner.extracthelpbody( Examiner.gethelptext( 'Examiner.extracthelpbody' ) )
 ```
 
 __ETC__
 See also
 
--Informer.gethelptext
--Informer.extracthelpheader
+-Examiner.gethelptext
+-Examiner.extracthelpheader
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | false |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : mHelpBody
-- DefiningClass : Informer
+- DefiningClass : Examiner
+ 
+</details>
 
 ---
 
@@ -487,18 +524,23 @@ copied to the fields of struct Att
 
 TODO : restructuring of meta.Validation.Size
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : Mc
 - OutputNames : Att
-- DefiningClass : Informer
+- DefiningClass : Examiner
+ 
+</details>
 
 ---
 
@@ -507,15 +549,20 @@ TODO : restructuring of meta.Validation.Size
 
 **Synopsis**: _Returns an empty object array of the given size_ 
 
+<details markdown="block">
+ 
 
-#### Attributes:
-
-<table>
-<table border=1><tr><th>Static</th><th>Abstract</th><th>Sealed</th><th>ExplicitConversion</th><th>Hidden</th></tr>
-<tr><td>true</td><td>false</td><td>false</td><td>false</td><td>true</td></tr>
-</table>
+| Attribute          | Value |
+|:------------------:|:-----:|
+| Static             | true  |
+| Abstract           | false |
+| Sealed             | false |
+| ExplicitConversion | false |
+| Hidden             | true  |
 
 - Access : public
 - InputNames : varargin
 - OutputNames : E
-- DefiningClass : Informer
+- DefiningClass : Examiner
+ 
+</details>

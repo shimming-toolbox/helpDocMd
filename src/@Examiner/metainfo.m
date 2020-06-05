@@ -64,7 +64,7 @@ for iObj = 1 : numel( MetaObj )
                 end
 
             case { 'meta.method' ; 'meta.property' } 
-                Att(iObj).( name ) = Informer.metainfo( Prop ) ;
+                Att(iObj).( name ) = Examiner.metainfo( Prop ) ;
             
             case 'meta.class'
             % copy the .Name entry only 
@@ -127,11 +127,11 @@ for iObj = 1 : numel( MetaObj )
     %% Fill the otherwise empty 'Description' fields 
     switch char(metaObjType)
         case 'meta.class'
-            mHelp = Informer.gethelptext( Att(iObj).Name ) ;
+            mHelp = Examiner.gethelptext( Att(iObj).Name ) ;
         otherwise
-            mHelp = Informer.gethelptext( [ strcat( Att(iObj).DefiningClass, ".", Att(iObj).Name ) ] ) ;
+            mHelp = Examiner.gethelptext( [ strcat( Att(iObj).DefiningClass, ".", Att(iObj).Name ) ] ) ;
     end
-    Att(iObj).Description         = Informer.extracthelpheader( mHelp, Att(iObj).Name ) ;
-    Att(iObj).DetailedDescription = Informer.extracthelpbody( mHelp ) ;
+    Att(iObj).Description         = Examiner.extracthelpheader( mHelp, Att(iObj).Name ) ;
+    Att(iObj).DetailedDescription = Examiner.extracthelpbody( mHelp ) ;
 
 end

@@ -3,7 +3,7 @@ function [mHelp] = gethelptext( name )
 %
 % mHelp = GETHELPTEXT( name )
     arguments
-        name {mustBeStringOrChar} = "Informer.gethelptext" ;
+        name {mustBeStringOrChar} = "Examiner.gethelptext" ;
     end
 
 mHelp = help( name ) ;

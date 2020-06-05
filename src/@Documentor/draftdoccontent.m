@@ -4,7 +4,7 @@ function [] = draftdoccontent( Dr, detailLevel )
 %     Dr.draftdoccontent( )
 %     Dr.draftdoccontent( detailLevel )
 %
-% Calls `Informer` to retrieve info on the file assigned to `Dr.mFile` and
+% Calls `Examiner` to retrieve info on the file assigned to `Dr.mFile` and
 % assigns a formatted string vector to `Dr.docContent` which can then be
 % printed to file via `Dr.printdoc()`.
 
@@ -24,7 +24,7 @@ function [] = draftdoccontent( Dr, detailLevel )
 %
 % TODO: Choose desired formating for documentation methods (e.g. documentbasic, documentfunction, etc)!
     arguments
-        Dr Documentor
+        Dr Documentor;
         detailLevel {mustBeMember(detailLevel,[0 1])} = ones(size(Dr)) ;
     end
     
@@ -40,7 +40,7 @@ function [] = draftdoccontent( Dr, detailLevel )
     for iM = 1 : numel(Dr)
         fprintf( [ num2str(iM) '...' ] ) ;
 
-        Info = Informer( Dr(iM).mFile ) ;
+        Info = Examiner( Dr(iM).mFile ) ;
         Info = Info.Attributes ;
 
         switch Info.mType{:}

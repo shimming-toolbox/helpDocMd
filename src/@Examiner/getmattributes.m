@@ -15,10 +15,10 @@ function [Att] = getmattributes( mFile )
 %   - .Name: Name of the script, function, class or class method 
 %       
 %   - .Description: Header line of help-text (string vector returned from
-%   Informer.extracthelpheader) 
+%   Examiner.extracthelpheader) 
 %
 %   - .DetailedDescription: Body of help-text (string vector returned from
-%   Informer.extracthelpbody) 
+%   Examiner.extracthelpbody) 
 %
 % 1. Function files
 %
@@ -92,7 +92,7 @@ function [Att] = getmattributes( mFile )
 % (Hence, for now, although the .Description and .DetailedDescription fields of
 % the returned attributes struct borrow their field names from (nominal)
 % meta.class properties, these are fields are actually assigned independently
-% of meta.class by calls to Informer methods: gethelptext(), extracthelpheader()
+% of meta.class by calls to Examiner methods: gethelptext(), extracthelpheader()
 % and extracthelpbody().)
 %
 % Furthermore, the current implementation of meta.class exhibits some curious behaviour:
@@ -105,10 +105,10 @@ function [Att] = getmattributes( mFile )
 %
 % See also 
 %
-% - Informer.mfiletype
-% - Informer.gethelptest
-% - Informer.gethelpbody
-% - Informer.gethelpheader
+% - Examiner.mfiletype
+% - Examiner.gethelptest
+% - Examiner.gethelpbody
+% - Examiner.gethelpheader
 % - <https://www.mathworks.com/help/matlab/ref/meta.class.html meta.class>
 % - <https://www.mathworks.com/help/matlab/ref/meta.property.html>
 % - <https://www.mathworks.com/help/matlab/ref/meta.validation-class.html meta.Validation>
@@ -117,7 +117,7 @@ function [Att] = getmattributes( mFile )
     end
 
 [mFolder, Att.Name]        = fileparts( mFile ) ;
-[Att.mType, mFile, mExist] = Informer.mfiletype( mFile ) ;
+[Att.mType, mFile, mExist] = Examiner.mfiletype( mFile ) ;
 
 if strcmp( Att.mType, "NA" ) 
     warning('Not a valid .m file.') ;
@@ -164,9 +164,9 @@ end %getmattributes()
 % -----
 function [Att] = addbasicdescription( Att )
 
-    mHelp                   = Informer.gethelptext( Att.Name ) ;
-    Att.Description         = Informer.extracthelpheader( mHelp, Att.Name ) ;
-    Att.DetailedDescription = Informer.extracthelpbody( mHelp ) ;
+    mHelp                   = Examiner.gethelptext( Att.Name ) ;
+    Att.Description         = Examiner.extracthelpheader( mHelp, Att.Name ) ;
+    Att.DetailedDescription = Examiner.extracthelpbody( mHelp ) ;
 
 end
 
@@ -183,7 +183,7 @@ end
 function [Att] = addclassattributes( Att )
     
     Mc        = meta.class.fromName( Att.Name ) ;
-    Att       = Informer.metainfo( Mc ) ;
+    Att       = Examiner.metainfo( Mc ) ;
     Att.mType = "classdef" ; % add .mType again since Att is overwritten in the above call
 
 end
@@ -211,8 +211,8 @@ function [Att] = addmethodattributes( Att )
     iMethod   = [ string( {Mc.MethodList.Name} ) == Att.Name ] ;
     MM        = Mc.MethodList( iMethod ) ;
     
-    %% Call Informer.metainfo( ) to get attributes struct:
-    Att       = Informer.metainfo( MM ) ;
+    %% Call Examiner.metainfo( ) to get attributes struct:
+    Att       = Examiner.metainfo( MM ) ;
     Att.mType = "method" ; % add .mType again since Att is overwritten in the above call
 
 end
