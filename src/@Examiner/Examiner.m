@@ -10,24 +10,21 @@ classdef Examiner
 %
 % __CONSTRUCTOR SYNTAX__
 %     
-%     Info = Examiner( mFile ) ;
+%     info = Examiner( mFile )
 % 
-% Creates an `Examiner` object pertaining to .m file (a script, function, class
-% method, or classdef file) pointed to by the path string `mFile`.
-% If `mFile` contains multiple files, then `Info` is returned as an
-% object-array.
-% 
-% `Examiner` has but two properties: `mFile` and `Attributes`.
+% Creates an `Examiner` object pertaining to `mFile`—a path string leading to a
+% MATLAB&reg; script, function, class method, or classdef file. If `mFile`
+% contains multiple files, `info` is returned as an object-array.
 %
-% `Attributes` is a struct containing all available functional details
-% regarding `mFile`. 
+% Besides `mFile`, `Examiner` has just one property: 
 %
-% `Attributes` cannot be set directly, but is updated whenever `mFile` is set.
+% `Attributes`: a struct containing all available functional details about
+% `mFile`. `Attributes` cannot be set directly, but is updated whenever `mFile`
+% is (re)assigned.
 %
 % The read-only fields of `Attributes` depend on the given .m-file type and
 % should be fairly self-explanatory given the field names. More detail is
 % available in the method documentation for Examiner.getmattributes.
-%
  
 
 properties( AbortSet = true )
@@ -141,6 +138,8 @@ end
 methods( Static, Hidden )
     %.....
     [Att] = metainfo( Mc )
+    %.....
+    [pkgs, pkgPaths] = unpack( mPath )
 end
 % =========================================================================    
 % =========================================================================    
