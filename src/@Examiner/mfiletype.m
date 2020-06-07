@@ -66,8 +66,18 @@ userDir = pwd ;
 for iFile = 1 : nnz( iMFiles ) 
   
     iM = iMFiles( iFile ) ;
-
+    
     [ folder, name, ext ] = fileparts( mPath( iM ) ) ;
+    [pkgs, pkgPaths]      = Examiner.unpack( mPath( iM ) );
+    
+    if ~isempty(pkgs)
+        % Go to top/base package folder 
+        cd( parent( pkgPaths(1) ) ); 
+        % Import (sub)package—NOTE: May need to change: 
+        % (Easier to import the entire package but not ideal...)
+        import( strcat(pkgs(end), '.*') ); 
+    end
+
     cd( folder ) ;
 
     % Explicitly test classdef possibility first to bypass the other statements.
