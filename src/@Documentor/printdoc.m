@@ -13,7 +13,7 @@ function [ docFile, errMsg ] = printdoc( Dr, Options )
 % arguments 1 and 2. Entries of `errMsg` are blank "" if printing succeeded without error.
     arguments
         Dr Documentor ;
-        Options.isOverwriting {mustBeBoolean} = false( size(Dr) ) ;
+        Options.isOverwriting {valid.mustBeBoolean} = false( size(Dr) ) ;
     end
 
 %% Check inputs 
