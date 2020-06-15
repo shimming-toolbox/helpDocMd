@@ -10,7 +10,7 @@ function [] = mustBeDocumentable( mFile )
 % - `mFile` points to a valid script, function, or classdef file, i.e.
 % `ismember( Examiner.mfiletype( mFile ), ["script", "function","classdef"] ) == 1`
     arguments
-        mFile(1,1) string {mustBeFile} ;
+        mFile(1,1) string {valid.mustBeFile} ;
     end
 
     if ~ismember( Examiner.mfiletype( mFile ), Documentor.mTypesSupported ) ;

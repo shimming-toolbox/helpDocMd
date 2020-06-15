@@ -82,7 +82,7 @@ end
 properties( AbortSet )
     
     % String vector specifying the full file path for the printed documentation
-    docFile string {mustBeStringScalarOrCharVector} = "" ;
+    docFile string {valid.mustBeStringScalarOrCharVector} = "" ;
 
     % Documentation text content as a string vector 
     docContent(:,1) string = "" ;

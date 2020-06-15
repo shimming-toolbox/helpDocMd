@@ -24,8 +24,8 @@ function [ Info ] = whatr( baseDir, isExcludingHidden )
 % See also
 % WHAT
     arguments
-        baseDir(1,:) { mustBeStringScalarOrCharVector, mustBeFolder } = "." ;
-        isExcludingHidden(1,1) { mustBeBoolean } = true ;
+        baseDir(1,:) { valid.mustBeStringScalarOrCharVector, valid.mustBeFolder } = "." ;
+        isExcludingHidden(1,1) { valid.mustBeBoolean } = true ;
     end
 
 P = Pathologist( baseDir ) ;

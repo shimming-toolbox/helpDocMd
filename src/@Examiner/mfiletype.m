@@ -18,7 +18,7 @@ function [mType, mPath, mExist] = mfiletype( mFile )
 % |  "NA"    | an unimplemented or non-Matlab file with a .m file extension
 % |  " "     | an invalid file path (e.g. folder, non-Matlab, or non-existent)
 % 
-% 2.`mPath` a string vector of the full file system paths.
+% 2. `mPath` a string vector of the full file system paths.
 %
 % 3. `mExist` a vector of return values (doubles) from Matlab function `exist` [2], 
 % namely: `mExist(i) = exist( mFile(i) );` the value *should* be == 2.
@@ -39,11 +39,11 @@ function [mType, mPath, mExist] = mfiletype( mFile )
 % See also
 % EXIST
     arguments
-        mFile { mustBeA( mFile, ["string" "char" "cellstr"] ) } ;
+        mFile { valid.mustBeA( mFile, ["string" "char" "cellstr"] ) } ;
     end
 
 % pos. TODO? Enable optional keyword input (e.g. function name) and defer to it
-% if abspath etc. fail to find anything assuming file path paths? ("+")
+% if abspath etc. fail to find anything
 
 Paths  = Pathologist( mFile ) ;
 mPath  = Paths.abs( mFile ) ;
@@ -66,9 +66,19 @@ userDir = pwd ;
 for iFile = 1 : nnz( iMFiles ) 
   
     iM = iMFiles( iFile ) ;
-
+    
     [ folder, name, ext ] = fileparts( mPath( iM ) ) ;
-    cd( folder ) ;  
+    [pkgs, pkgPaths]      = Examiner.unpack( mPath( iM ) );
+    
+    if ~isempty(pkgs)
+        % Go to top/base package folder 
+        cd( parent( pkgPaths(1) ) ); 
+        % Import (sub)package—NOTE: May need to change: 
+        % (Easier to import the entire package but not ideal...)
+        import( strcat(pkgs(end), '.*') ); 
+    end
+
+    cd( folder ) ;
 
     % Explicitly test classdef possibility first to bypass the other statements.
     % (i.e. exist() currently returns "2" even for classdef files when

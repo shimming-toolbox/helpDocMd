@@ -80,8 +80,8 @@ function [mFiles] = findfiles( src, isRecursive )
 % See also
 % FINDFILES
     arguments
-        src {mustBeStringOrCharOrCellstr} ;
-        isRecursive(1,1) {mustBeBoolean} = true ;
+        src {valid.mustBeStringOrCharOrCellstr} ;
+        isRecursive(1,1) {valid.mustBeBoolean} = true ;
     end
 
 % TODO: make Pathologist initialize `data` w/full paths when possible...
@@ -93,7 +93,7 @@ dirsIn = P.folders ;
 %% Validate input paths exist 
 if all( ~P.isvalid )
     error( 'helpDocMd:Documentor.findfiles:invalidPath', ...
-           '\n Failed to validate any of the given input paths..' ) ;
+           '\n Failed to validate any of the given input paths.', '%s' ) ;
 
 elseif any( ~P.isvalid )
     % in case the list is long, print it above the warning

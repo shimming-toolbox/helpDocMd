@@ -113,7 +113,7 @@ function [Att] = getmattributes( mFile )
 % - <https://www.mathworks.com/help/matlab/ref/meta.property.html>
 % - <https://www.mathworks.com/help/matlab/ref/meta.validation-class.html meta.Validation>
     arguments
-        mFile {mustBeStringOrChar, mustBeFile} = which("getmattributes.m") ;  
+        mFile {valid.mustBeStringOrChar, valid.mustBeFile} = which("getmattributes.m") ;  
     end
 
 [mFolder, Att.Name]        = fileparts( mFile ) ;
@@ -125,7 +125,20 @@ if strcmp( Att.mType, "NA" )
 end
 
 userDir = pwd ;
-cd( mFolder ) ; 
+
+[pkgs, pkgPaths] = Examiner.unpack( mFile );
+
+if ~isempty(pkgs)
+    % Go to top/base package folder 
+    cd( parent( pkgPaths(1) ) ); 
+    % Import (sub)package—NOTE: May need to change: 
+    % (Easier to import the entire package but not ideal...)
+    % import( strcat(pkgs(end), '.*') ); 
+    Att.Name = join( [pkgs(end); Att.Name], '.' );
+else
+    cd( mFolder ) ; 
+end
+
 
 try % Return to userDir if an error occurs
 
@@ -157,13 +170,11 @@ catch Me
 
 end
 
-end %getmattributes()
-
 % -----
 %% Local functions
 % -----
 function [Att] = addbasicdescription( Att )
-
+    
     mHelp                   = Examiner.gethelptext( Att.Name ) ;
     Att.Description         = Examiner.extracthelpheader( mHelp, Att.Name ) ;
     Att.DetailedDescription = Examiner.extracthelpbody( mHelp ) ;
@@ -216,3 +227,6 @@ function [Att] = addmethodattributes( Att )
     Att.mType = "method" ; % add .mType again since Att is overwritten in the above call
 
 end
+
+end %getmattributes()
+

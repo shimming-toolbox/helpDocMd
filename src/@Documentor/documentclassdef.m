@@ -5,8 +5,8 @@ function [docStr] = documentclassdef( Info, isDetailed, isDropdown )
 % (courtesy of calls to `documentclassproperties` and `documentclassmethods`).
     arguments
         Info struct ;
-        isDetailed {mustBeBoolean} = true ;
-        isDropdown {mustBeBoolean} = true ;
+        isDetailed {valid.mustBeBoolean} = true ;
+        isDropdown {valid.mustBeBoolean} = true ;
     end
 
 assert( strcmp(Info.mType, "classdef"), 'mFile is not a class' ) ;

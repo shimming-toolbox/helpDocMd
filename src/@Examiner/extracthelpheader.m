@@ -29,8 +29,8 @@ function [mHelpHeader] = extracthelpheader( mHelp, name )
 % See also
 % Examiner.gethelptext
     arguments
-        mHelp {mustBeStringOrCharOrCellstr} ;
-        name {mustBeStringOrChar} = "" ;
+        mHelp {valid.mustBeStringOrCharOrCellstr} ;
+        name {valid.mustBeStringOrChar} = "" ;
     end
     
 if iscellstr( mHelp ) || ischar( mHelp )

@@ -24,9 +24,9 @@ function [dirs] = mapdirectorytree( baseDir, isReturnRelative, isExcludingHidden
 % See also 
 % FILEATTRIB, DIR
     arguments
-        baseDir(1,:) { mustBeStringScalarOrCharVector, mustBeFolder } = "." ;
-        isReturnRelative(1,1) { mustBeBoolean }  = true ;
-        isExcludingHidden(1,1) { mustBeBoolean } = true ;
+        baseDir(1,:) { valid.mustBeStringScalarOrCharVector, valid.mustBeFolder } = "." ;
+        isReturnRelative(1,1) { valid.mustBeBoolean }  = true ;
+        isExcludingHidden(1,1) { valid.mustBeBoolean } = true ;
     end
 
 %% Map subdirectories 

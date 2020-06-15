@@ -37,7 +37,7 @@ function [] = autoassigndocfiles( Dr, outputDir )
         end
     end
     
-    mustBeStringScalarOrCharVector(outputDir) ;
+    valid.mustBeStringScalarOrCharVector(outputDir) ;
 
     %% Recreate subdirectory structure in outputDir
     [folders, names, extensions] = arrayfun( @fileparts, mFiles ) ;

@@ -2,7 +2,7 @@ function docStr = documentclassmethods( Info, isDropdown )
 %DOCUMENTCLASSMETHODS Return string vector of class method documentation
     arguments
         Info struct ;
-        isDropdown {mustBeBoolean} = true;
+        isDropdown {valid.mustBeBoolean} = true;
     end
 
 % assert( strcmp(Info.mType, "classdef"), 'mFile is not a class' ) ;

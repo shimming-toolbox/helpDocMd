@@ -2,8 +2,8 @@ function docStr = documentclassproperties( Info, isDetailed, isDropdown )
 %DOCUMENTCLASSPROPERTIES Return string vector of class property documentation
     arguments
         Info struct ;
-        isDetailed {mustBeBoolean} = true ;
-        isDropdown {mustBeBoolean} = true ;
+        isDetailed {valid.mustBeBoolean} = true ;
+        isDropdown {valid.mustBeBoolean} = true ;
     end
 
 % assert( strcmp(Info.mType, "classdef"), 'mFile is not a class' ) ;

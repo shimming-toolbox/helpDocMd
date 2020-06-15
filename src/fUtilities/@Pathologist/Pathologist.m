@@ -31,7 +31,7 @@ properties
     %TODO: data can be private or at least hidden once subsasgn/subsref both work...
 
     % Path data: real or fictitious files or folders
-    data {mustBeString} = "./" ;
+    data {valid.mustBeString} = "./" ;
 
     % Sets the return datatype (class) of path info as "string" "char" or "cell"
     % 

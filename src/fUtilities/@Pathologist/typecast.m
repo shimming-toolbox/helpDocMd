@@ -29,8 +29,8 @@ function [txtOut] = typecast( txtIn, castAs )
 % See also
 % CHAR,CELL,CELLSTR,STRING
     arguments
-        txtIn {mustBeStringOrCharOrCellstr} ;
-        castAs(1,:) {mustBeStringScalarOrCharVector, ...
+        txtIn {valid.mustBeStringOrCharOrCellstr} ;
+        castAs(1,:) {valid.mustBeStringScalarOrCharVector, ...
             mustBeMember( castAs, ["string" "char" "cell" "cellstr"] ) } = "string" ;
     end
 

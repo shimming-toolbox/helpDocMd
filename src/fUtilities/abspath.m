@@ -26,7 +26,7 @@ function [ pathOut, pathType ] = abspath( pathIn )
 % See also 
 % FILEATTRIB 
     arguments
-        pathIn { mustBeStringOrCharOrCellstr } ;
+        pathIn { valid.mustBeStringOrCharOrCellstr } ;
     end
 
 [ pathOut, pathType ] = callfileattrib( strip( string( pathIn ) ) ) ;
