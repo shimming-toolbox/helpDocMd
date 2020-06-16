@@ -52,7 +52,8 @@ The first and most difficult step to publishing your source code documentation:
 To publish it, the process is simple:
 
 1. Assemble the list of .m files and/or code-containing directories that you
-   want to include as entries in a string vector: let's call it `src`.
+   want to include as entries in a string vector: let's call it `src`. 
+   (By default, if `src` is a directory, it will be searched recursively for *documentable* .m files.) 
 
 2. Initialize a `Documentor` object (e.g. one called `Dr`) with your list:  
 ```
