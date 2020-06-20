@@ -36,7 +36,7 @@ MATLAB&reg; documentation:
 2. Start up Matlab and add the downloaded 'src' directory along with its
    subfolders to the path by typing 
    
-   `addpath( genpath( '.../src/' ); which('Documentor')`
+   `addpath( genpath( '.../src/' )); which('Documentor')`
    
    into the command prompt (replacing the ellipsis with the path to the downloaded folder). 
    The filepath to Documentor.m should be displayed.
