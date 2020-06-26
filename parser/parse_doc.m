@@ -2,24 +2,29 @@ function docStruct = parse_doc(functionPath)
 %PARSE_DOC Generates a structure from the input function's documentation.
 %
 % SYNTAX
+%
 %   docStruct = parse_doc(functionPath)
 %
 % DESCRIPTION
+%
 %   Parses the function corresponding to the input path and fetches the
 %   information corresponding to the function's documentation before
 %   reorganising it as a structure
 %
 % INPUTS
+%
 %   functionPath
 %     Character array corresponding to the path of the function. 
 %
 % OUTPUTS
+%
 %   docStruct
 %     Structure containing the different parts of the function's
 %     documentation as its fields (summary, description, inputs, outputs,
 %     and notes).
 %
 % NOTES
+%
 % It requires a total respect of the template (e.g no "forgotten" spaces).
 % All the fields (SYNTAX, DESCRIPTION, etc...) must be provided in the
 % parsed function.
