@@ -14,7 +14,7 @@ function docStruct = parse_doc(functionPath)
 % INPUTS
 %
 %   functionPath
-%     Character array corresponding to the path of the function. 
+%     Character array corresponding to the path of the function.
 %
 % OUTPUTS
 %
@@ -37,39 +37,52 @@ fgetl(functionTxt); % Skip the first line (function...)
 functionDoc = [];
 
 textLine = fgetl(functionTxt);
-
-while length(textLine) >= 1 % Parsing will stop at the end of description
-    if erase(textLine, '%') ~= 0 % Delete the empty lines
+nLine = 1;
+headersPos = []; % Store the positions of the headers
+while length(textLine) >= 1 % Parsing will stop at first empty line
+    if erase(textLine, '%') ~= 0 % Delete the empty commented lines
+        
         functionDoc = [functionDoc string(erase(textLine, '%'))];
+        
+        if sum(isstrprop(strip(erase(textLine, '%')), 'upper')) ==...
+                length(strip(erase(textLine, '%'))) % Check uppercase
+            
+            headersPos = [headersPos nLine]; % Store the header line
+            
+        end
+        nLine = nLine+1;
     end
-    textLine = fgetl(functionTxt);
+    textLine = fgetl(functionTxt); % Reads the next line
 end
-% Close the function file
-fclose(functionTxt);
 
-%% Summary
+fclose(functionTxt); % Close the function file
+headersPos = [headersPos length(functionDoc)+1]; % Position of the last line
+%% Fetch the function's summary
 docStruct.summary = functionDoc(1); % Store the summary of the function
 
-%% Syntax
-sectionStart = find(functionDoc == ' SYNTAX');
-sectionEnd = find(functionDoc == ' DESCRIPTION');
-docStruct.syntax = erase(functionDoc(sectionStart+1:sectionEnd-1),'   ');
-%% Description 
-sectionStart = find(functionDoc == ' DESCRIPTION');
-sectionEnd = find(functionDoc == ' INPUTS');
-docStruct.description = strip(strjoin(functionDoc(sectionStart+1:sectionEnd-1),'')); 
-%% Inputs
-sectionStart = find(functionDoc == ' INPUTS');
-sectionEnd = find(functionDoc == ' OUTPUTS');
-section = functionDoc(sectionStart+1:sectionEnd-1);
-docStruct.inputs.names = strip(section(cellfun('isempty', strfind(section,'     '))));
-docStruct.inputs.description = split(strjoin(replace(strip(section(2:end)),docStruct.inputs.names(:),'|||')),'|||')';
-%% Outputs
-sectionStart = find(functionDoc == ' OUTPUTS');
-sectionEnd = find(functionDoc == ' NOTES');
-section = functionDoc(sectionStart+1:sectionEnd-1);
-docStruct.outputs.names = strip(section(cellfun('isempty', strfind(section,'     '))));
-docStruct.outputs.description = split(strjoin(replace(strip(section(2:end)),docStruct.inputs.names(:),'|||')),'|||')';
-%% Notes
-sectionStart = find(functionDoc == ' NOTES');
-docStruct.notes = strip(strjoin(functionDoc(sectionStart+1:end),'')); 
+%% Fetch the other sections
+
+for nSection = 1:length(headersPos)-1 % Number of sections
+    header = strip(functionDoc(headersPos(nSection))); % Section name
+    sectionStart = headersPos(nSection)+1; % First line after header
+    sectionEnd = headersPos(nSection+1)-1; % Last line before next header
+    
+    switch header
+        case 'SYNTAX'
+            docStruct.syntax = erase(functionDoc(sectionStart:sectionEnd),'   ');
+        case 'DESCRIPTION'
+            docStruct.description = strjoin(strip(functionDoc(sectionStart:sectionEnd)),' ');
+        case 'INPUTS'
+            section = functionDoc(sectionStart:sectionEnd);
+            docStruct.inputs.names = strip(section(cellfun('isempty', strfind(section,'     '))));
+            docStruct.inputs.description = split(strjoin(replace(strip(section(2:end)),docStruct.inputs.names(:),'|||')),'|||')';
+        case 'OUTPUTS'
+            section = functionDoc(sectionStart:sectionEnd);
+            docStruct.outputs.names = strip(section(cellfun('isempty', strfind(section,'     '))));
+            docStruct.outputs.description = split(strjoin(replace(strip(section(2:end)),docStruct.outputs.names(:),'|||')),'|||')';
+        case 'NOTES'
+            docStruct.notes = strjoin(strip(functionDoc(sectionStart:end)),'');
+        otherwise
+            error('Unknown section name in the function documentation')
+    end
+end
