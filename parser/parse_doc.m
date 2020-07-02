@@ -81,7 +81,7 @@ for nSection = 1:length(headersPos)-1 % Number of sections
             docStruct.outputs.names = strip(section(cellfun('isempty', strfind(section,'     '))));
             docStruct.outputs.description = split(strjoin(replace(strip(section(2:end)),docStruct.outputs.names(:),'|||')),'|||')';
         case 'NOTES'
-            docStruct.notes = strjoin(strip(functionDoc(sectionStart:end)),'');
+            docStruct.notes = strjoin(strip(functionDoc(sectionStart:end)),' ');
         otherwise
             error('Unknown section name in the function documentation')
     end
