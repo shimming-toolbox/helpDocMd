@@ -30,13 +30,13 @@ function docStruct = parse_doc(functionPath)
 % parsed function.
 
 %% Read the function and keep only the description section
-functionTxt = fopen(functionPath); % Open the function file
+functionFile = fopen(functionPath); % Open the function file
 
-fgetl(functionTxt); % Skip the first line (function...)
+fgetl(functionFile); % Skip the first line (function...)
 % Initialize a cell that will receive the lines in the description
 functionDoc = [];
 
-textLine = fgetl(functionTxt);
+textLine = fgetl(functionFile);
 nLine = 1;
 headersPos = []; % Store the positions of the headers
 while length(textLine) >= 1 % Parsing will stop at first empty line
@@ -52,10 +52,10 @@ while length(textLine) >= 1 % Parsing will stop at first empty line
         end
         nLine = nLine+1;
     end
-    textLine = fgetl(functionTxt); % Reads the next line
+    textLine = fgetl(functionFile); % Reads the next line
 end
 
-fclose(functionTxt); % Close the function file
+fclose(functionFile); % Close the function file
 headersPos = [headersPos length(functionDoc)+1]; % Position of the last line
 %% Fetch the function's summary
 docStruct.summary = functionDoc(1); % Store the summary of the function
