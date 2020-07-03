@@ -8,12 +8,15 @@ function test_parse_doc
 cd('../parser')
 docStruct = parse_doc('parse_doc.m');
 
-assert(isstruct(docStruct)) % Check if docStruct is indeed a structure
+% Check if docStruct is indeed a structure
+assert(isstruct(docStruct), 'docStruct is not a structure') 
 
 % Make sure every input/output name matches a description
 if docStruct.inputs.names ~= ''
-assert(length(docStruct.inputs.names) == length(docStruct.inputs.description));
+assert(length(docStruct.inputs.names) == length(docStruct.inputs.description),...
+    'The number of input names does not match the number of descriptions');
 end
 if docStruct.outputs.names ~= ''
-assert(length(docStruct.outputs.names) == length(docStruct.outputs.description));
+assert(length(docStruct.outputs.names) == length(docStruct.outputs.description),...
+    'The number of output names does not match the number of descriptions');
 end
