@@ -32,9 +32,9 @@ function docStruct = parse_doc(functionPath)
 %% Read the function and keep only the description section
 functionFile = fopen(functionPath); % Open the function file
 
-fgetl(functionFile); % Skip the first line (function...)
+fgetl(functionFile); % Skip the first line (function output = name(input))
 % Initialize a cell that will receive the lines in the description
-functionDoc = [];
+functionDoc = string([]);
 
 textLine = fgetl(functionFile);
 nLine = 1;
